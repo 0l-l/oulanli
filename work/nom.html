@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>NOM — Oulan Li</title>
-<meta name="description" content="Redesigning restaurant discovery for college students with swipe-based recommendations.">
+<meta name="description" content="Redesigning restaurant discovery so indecisive college students can choose where to eat in a swipe.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -12,81 +12,72 @@
 </head>
 <body>
 <div class="wrap">
-
   <header class="site-header">
     <a class="name" href="../index.html">Oulan Li</a>
     <nav aria-label="Main">
       <a href="../index.html#work" aria-current="page">Work</a>
       <a href="../about.html">About</a>
       <a href="../assets/Oulan-Li-Resume.pdf">Résumé</a>
-      <a href="#contact">Contact</a>
     </nav>
   </header>
-
   <main>
-    <section class="case-head">
-      <p class="label">04 · Jan – Jun 2024 · UCSD Design Co</p>
+    <header class="cs-head">
+      <p class="label">UCSD Design Co · Jan – Jun 2024</p>
       <h1>NOM</h1>
-      <p class="summary">College students were giving up on restaurant apps buried in options. NOM reimagines Yelp for students, with swipe-based recommendations that make choosing fast, personal and a little fun.</p>
-      <dl class="case-facts">
-        <div><dt>My role</dt><dd>UX Designer</dd></div>
-        <div><dt>Team</dt><dd>UCSD Design Co studio team</dd></div>
-        <div><dt>Methods</dt><dd>Surveys, affinity mapping, competitive audit, usability testing</dd></div>
-        <div><dt>Recognition</dt><dd>UX Project Design Studio Certification</dd></div>
-      </dl>
-    </section>
-
-    <section class="case-hero">
-      <figure class="fig"><div class="placeholder">FIG. 01 — NOM swipe screen (add final Figma frames)</div></figure>
-    </section>
-
-    <section class="case-section">
-      <p class="label">Problem</p>
-      <div class="body">
-        <h2>Too many options, not enough decision</h2>
-        <p>Students care about different things — price, atmosphere, how photogenic a place is, how quick it is to decide. Surveys and early usability sessions showed a clear pattern: when people faced long lists, they got frustrated or abandoned the search altogether. The challenge was to simplify the decision without making it feel generic.</p>
+      <p class="sub">Redesigning restaurant discovery so indecisive college students can choose where to eat in a swipe.</p>
+    </header>
+    <div class="cs-hero"><div class="cover" style="--c:#E2EBDD; padding: clamp(28px, 5vw, 64px)"><span style="font-size: clamp(44px, 7vw, 96px)">NOM</span><small>Restaurant discovery for college students</small></div></div>
+    <div class="cs-layout">
+      <nav class="toc" aria-label="On this page"><a href="#overview">Overview</a><a href="#solution">Solution</a><a href="#impact">Outcome</a><a href="#problem">Problem</a><a href="#research">Research</a><a href="#process">Process</a><a href="#reflection">Reflection</a></nav>
+      <div class="cs-body">
+<section class="cs-section" id="overview"><p class="label">Overview</p><h2>Yelp, reimagined for students</h2>
+<p>NOM is a redesign of Yelp for college students, created in UCSD Design Co’s UX project studio — a pre-professional program that pairs student designers with an industry-style process.</p>
+<dl class="meta"><div><dt>Timeline</dt><dd>Jan – Jun 2024</dd></div><div><dt>My role</dt><dd>UX Designer</dd></div><div><dt>Team</dt><dd>UCSD Design Co studio team</dd></div><div><dt>Responsibilities</dt><dd>Research on swipe interactions · Prototyping · Leading two rounds of usability testing</dd></div><div><dt>Recognition</dt><dd>UX Project Design Studio Certification</dd></div></dl></section>
+<section class="cs-section" id="solution"><p class="label">Solution</p><h2>Fast, visual, personal</h2>
+<div class="features"><div class="feature"><p class="label">01</p><h3>Swipe recommendations</h3><p>A cross between a dating app and a restaurant guide: quick, visual choices that learn what you like.</p></div><div class="feature"><p class="label">02</p><h3>Gallery-style home</h3><p>Nearby restaurants, cafés and food trucks curated for students, with student-centric reviews and local discounts.</p></div><div class="feature"><p class="label">03</p><h3>Map search with real filters</h3><p>Search on a map, with filters for both price and aesthetics.</p></div></div></section>
+<section class="cs-section" id="impact"><p class="label">Outcome</p><div class="stats"><div class="stat"><strong>2</strong><span>rounds of usability testing with college students</span></div><div class="stat"><strong>4</strong><span>student personas grounding every design decision</span></div><div class="stat"><strong>7</strong><span>competitors audited across review and delivery apps</span></div></div></section>
+<section class="cs-section" id="problem"><p class="label">Problem</p><h2>Too many options, not enough decision</h2>
+<p>Surveys and early usability sessions showed a clear pattern: faced with long lists, students got frustrated or abandoned the search entirely. And they care about very different things — price, atmosphere, how a place looks, how fast they can decide.</p>
+<div class="hmw"><b>HOW MIGHT WE</b>help college students decide where to eat quickly, without losing what makes the choice personal?</div></section>
+<section class="cs-section" id="research"><p class="label">Research</p><h2>Four kinds of student eaters</h2>
+<p>We synthesized findings in an affinity diagram and audited Yelp, Google reviews, Tripadvisor, the Michelin Guide, Uber Eats, DoorDash and Postmates on how easy their filters and navigation were to use. Personas showed why one ranked list fails:</p>
+<div class="insights"><div class="insight"><p class="label">Persona</p><h3>The campus foodie</h3><p>No car, loves trying new cuisines, spends on drinks and desserts.</p></div><div class="insight"><p class="label">Persona</p><h3>The picky commuter</h3><p>Cooks often; eating out is rare, so it has to be worth it.</p></div><div class="insight"><p class="label">Persona</p><h3>The indecisive reviewer</h3><p>Reads everything, still can’t choose — and gets bored of the usual options.</p></div><div class="insight"><p class="label">Persona</p><h3>The social eater</h3><p>Cares more about atmosphere and friends than the food itself.</p></div></div>
+<p>Storyboards put them in real moments: a late drive home through an unfamiliar town, a sunny beach day on a budget, a new student overwhelmed by choices while carrying groceries without a car.</p></section>
+<section class="cs-section" id="process"><p class="label">Process</p><h2>Borrowing the swipe — then refining it</h2>
+<div class="iteration"><p class="label">Round 1</p><h3>Swipe to decide</h3>
+<p>I researched how social apps use swiping to keep people engaged and prototyped a recommendation flow that narrows choices one card at a time.</p>
+<div class="takeaway"><b>Takeaway</b><p>Swiping alone wasn’t enough: some students wanted quick, budget-friendly picks, others cared most about how a place looked.</p></div></div>
+<div class="iteration"><p class="label">Round 2</p><h3>Giving users control over “a good match”</h3>
+<p>I added aesthetic filters alongside price, so students could shape their recommendations without bringing back the long list.</p></div></section>
+<section class="cs-section" id="reflection"><p class="label">Reflection</p><ol class="learnings"><li><h3>Turn messy feedback into a few decisions</h3><p>Conflicting preferences became two clear levers — price and aesthetics — instead of a pile of features.</p></li><li><h3>Familiar patterns lower the learning curve</h3><p>Borrowing the swipe from social apps made a new kind of search feel instantly usable.</p></li></ol></section>
       </div>
+    </div>
+    <section class="next" aria-label="More work">
+      <h2>Thanks for reading! More work →</h2>
+      <div class="grid"><a class="card" href="vidviz.html">
+        <div class="thumb"><div class="cover" style="--c:#DFE6F3"><span>VidViz</span><small>A visual learning space for long-form video</small></div></div>
+        <p class="label">HCI research tool</p>
+        <div class="row"><h3>VidViz</h3><span class="badge">HCI Researcher</span></div>
+        <p>Turning hour-long lecture videos into explorable, AI-structured maps for active learning.</p>
+        <p class="tags">HCI research · Generative AI · Learning tools</p>
+      </a><a class="card" href="360-studio.html">
+        <div class="thumb"><img src="https://projects.etc.cmu.edu/360-studio/wp-content/uploads/2026/11/Weixin-Image_20261104174152_129_239-edited.jpg" alt="Two players cooking together around the 360° Ring, sharing tools on a rotating Lazy Susan" loading="lazy"></div>
+        <p class="label">Location-based game · Production</p>
+        <div class="row"><h3>360 Studio</h3><span class="badge live">● In progress · Producer</span></div>
+        <p>Producing a semester of rapid prototypes to find out what makes play around a 360° cylindrical screen work.</p>
+        <p class="tags">Production · Playtesting · Location-based entertainment</p>
+      </a></div>
     </section>
-
-    <section class="case-section">
-      <p class="label">Research</p>
-      <div class="body">
-        <h2>Mapping the landscape</h2>
-        <p>We gathered findings into an affinity diagram and audited competitors across reviews (Yelp, Google reviews, Tripadvisor, the Michelin Guide) and delivery apps (Uber Eats, DoorDash, Postmates), comparing how easy their filters and navigation were to use. From this we wrote problem statements and design goals focused on the college-student context.</p>
-        <h3>Four kinds of student eaters</h3>
-        <p>Our personas showed why one ranked list fails: the on-campus foodie without a car who loves trying new cuisines; the commuter who cooks and is picky on the rare night out; the indecisive student who reads every review and still can’t choose; and the social eater for whom the atmosphere and friends matter more than the food. Storyboards put them in real moments — a late drive home through an unfamiliar town, a sunny beach day on a budget, a new student overwhelmed by options while carrying groceries.</p>
-      </div>
-    </section>
-
-    <section class="case-section">
-      <p class="label">Design</p>
-      <div class="body">
-        <h2>Borrowing the swipe</h2>
-        <p>I researched how social apps use swiping to keep people engaged, and designed a recommendation interface that works like a cross between a dating app and a restaurant guide: quick, visual and personal. Around it we built a gallery-style home page, a search page with map integration, student-centric reviews, local discounts and a curated set of nearby restaurants, cafés and food trucks.</p>
-      </div>
-    </section>
-
-    <section class="case-section">
-      <p class="label">Testing</p>
-      <div class="body">
-        <h2>Two rounds of usability testing</h2>
-        <p>I designed prototypes and led two rounds of usability testing with college students, iterating between rounds to improve usability and engagement.</p>
-        <p>Testing showed that swiping alone wasn’t enough for everyone: some students wanted quick, budget-friendly picks, others cared most about how a place looked. In the next round I added aesthetic filters alongside price, giving people control over what “a good match” meant without bringing back the long list. The lesson I carried forward was how to turn scattered, sometimes conflicting feedback into a small number of concrete design decisions.</p>
-      </div>
-    </section>
-
-    <nav class="case-nav" aria-label="Projects">
-      <a href="familink.html">← famiLink</a>
-      <a href="vidviz.html">Next: VidViz →</a>
-    </nav>
   </main>
-
   <footer class="site-footer" id="contact">
-    <p>Open to UX, game design and production roles.</p>
+    <div>
+      <h2>Let’s connect.</h2>
+      <p>Open to UX design, game design and production roles.</p>
+    </div>
     <div class="links">
-      <a href="mailto:YOUR-EMAIL">YOUR-EMAIL</a>
+      <a href="mailto:YOUR-EMAIL">Email</a>
       <a href="https://www.linkedin.com/in/oulan-li-69a9032a8">LinkedIn</a>
-      <a href="../assets/Oulan-Li-Resume.pdf">Résumé (PDF)</a>
+      <a href="../assets/Oulan-Li-Resume.pdf">Résumé</a>
     </div>
   </footer>
 </div>

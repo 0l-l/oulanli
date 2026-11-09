@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>famiLink — Oulan Li</title>
-<meta name="description" content="A shared virtual home for long-distance families, researched and tested through role-play prototyping.">
+<meta name="description" content="Bringing long-distance families closer through a shared virtual home and small daily rituals.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -12,99 +12,73 @@
 </head>
 <body>
 <div class="wrap">
-
   <header class="site-header">
     <a class="name" href="../index.html">Oulan Li</a>
     <nav aria-label="Main">
       <a href="../index.html#work" aria-current="page">Work</a>
       <a href="../about.html">About</a>
       <a href="../assets/Oulan-Li-Resume.pdf">Résumé</a>
-      <a href="#contact">Contact</a>
     </nav>
   </header>
-
   <main>
-    <section class="case-head">
-      <p class="label">03 · Winter 2024 · COGS 123 Social Computing, UC San Diego</p>
+    <header class="cs-head">
+      <p class="label">COGS 123 Social Computing · UC San Diego · Winter 2024</p>
       <h1>famiLink</h1>
-      <p class="summary">Families who live far apart still want to stay close, but calls start to feel like obligations. famiLink is a shared virtual home where small daily prompts make keeping in touch light and playful.</p>
-      <dl class="case-facts">
-        <div><dt>My role</dt><dd>UX Researcher — research, interviews, competitive analysis, prototype-session storyline</dd></div>
-        <div><dt>Team</dt><dd>Wendy Hong, Oulan Li, Tingyin Liu, Victoria Yu</dd></div>
-        <div><dt>Timeline</dt><dd>10 weeks</dd></div>
-        <div><dt>Tools</dt><dd>Google Forms, FigJam, Figma</dd></div>
-      </dl>
-    </section>
-
-    <section class="case-hero">
-      <figure class="fig"><div class="placeholder">FIG. 01 — Virtual living room and family sprites (add Figma screen)</div></figure>
-    </section>
-
-    <section class="case-section">
-      <p class="label">Problem</p>
-      <div class="body">
-        <h2>Distance turns connection into a chore</h2>
-        <p>Our audience was distributed families: international students, college-aged kids in other cities, people working away from home. Asynchronous messages miss the small moments of daily life, and staying in touch can start to feel like an obligation rather than something meaningful.</p>
+      <p class="sub">Bringing long-distance families closer through a shared virtual home and small daily rituals.</p>
+    </header>
+    <div class="cs-hero"><div class="cover" style="--c:#F2E5D6; padding: clamp(28px, 5vw, 64px)"><span style="font-size: clamp(44px, 7vw, 96px)">famiLink</span><small>A virtual home for distributed families</small></div></div>
+    <div class="cs-layout">
+      <nav class="toc" aria-label="On this page"><a href="#overview">Overview</a><a href="#solution">Solution</a><a href="#impact">Outcome</a><a href="#problem">Problem</a><a href="#research">Research</a><a href="#process">Process</a><a href="#reflection">Reflection</a></nav>
+      <div class="cs-body">
+<section class="cs-section" id="overview"><p class="label">Overview</p><h2>Staying close when you live far apart</h2>
+<p>International students, college-aged kids in other cities, parents working away from home — distributed families still want to bond, but distance and busy schedules make contact feel like an obligation. famiLink is a shared virtual home where small daily prompts make keeping in touch light and playful.</p>
+<dl class="meta"><div><dt>Timeline</dt><dd>10 weeks · Winter 2024</dd></div><div><dt>My role</dt><dd>UX Researcher</dd></div><div><dt>Team</dt><dd>Wendy Hong, Oulan Li, Tingyin Liu, Victoria Yu</dd></div><div><dt>Responsibilities</dt><dd>Background research · User interviews · Competitive analysis · Prototype-session storyline · Portfolio design</dd></div></dl></section>
+<section class="cs-section" id="solution"><p class="label">Solution</p><h2>A home that runs on small daily moments</h2>
+<div class="features"><div class="feature"><p class="label">01</p><h3>Daily and weekly prompts</h3><p>A mood check, an outfit photo, a message of kindness, a drawing, a quiz, a family vote, writing together — plus a shared “Week at a Glance” calendar.</p></div><div class="feature"><p class="label">02</p><h3>A shared virtual living room</h3><p>Every family member builds a custom sprite and decorates the home together with rewards they earn.</p></div><div class="feature"><p class="label">03</p><h3>Mode switching for every generation</h3><p>A lively virtual room, or a simpler static view for family members less comfortable with apps.</p></div></div></section>
+<section class="cs-section" id="impact"><p class="label">Outcome</p><div class="stats"><div class="stat"><strong>2</strong><span>rounds of role-play prototype testing</span></div><div class="stat"><strong>7</strong><span>daily family tasks designed and tested</span></div><div class="stat"><strong>~4/5</strong><span>typical task rating — easier, more interactive tasks scored highest</span></div></div>
+<blockquote>“I liked how adorable it is! Imagining doing this w my family makes me happy!”<cite>— Prototype participant</cite></blockquote></section>
+<section class="cs-section" id="problem"><p class="label">Problem</p><h2>Distance turns connection into a chore</h2>
+<p>Asynchronous messages miss the small moments of everyday life, and calls can feel like a duty rather than something meaningful. Families end up with awkward silences and few shared topics.</p>
+<div class="hmw"><b>HOW MIGHT WE</b>help distributed families share everyday moments so that staying in touch feels like play, not obligation?</div></section>
+<section class="cs-section" id="research"><p class="label">Research</p><h2>Interviews and the gap in existing apps</h2>
+<p>We interviewed people living away from family about how often they talk, through which channels, what gets in the way and what “too much” contact feels like. I led the competitive analysis, mapping two kinds of products:</p>
+<div class="insights"><div class="insight"><p class="label">Family utilities</p><h3>Useful, but not warm</h3><p>Life360 and Google Families share location and controls securely — but miss the warmth of family interaction.</p></div><div class="insight"><p class="label">Social &amp; play</p><h3>Engaging, but not about family</h3><p>BeReal’s daily prompt and SimCity’s shared building are compelling mechanics, but neither is built around relationships.</p></div><div class="insight"><p class="label">Opportunity</p><h3>Play around the people who matter</h3><p>Combine the engagement of games and daily prompts with a space designed for family bonds.</p></div></div></section>
+<section class="cs-section" id="process"><p class="label">Process</p><h2>Testing a social app by simulating a family</h2>
+<p>Social apps are hard to test with one user, so we ran role-play sessions in FigJam. Participants were assigned roles in a fictional family, built their sprites, met in the living room and played through a full week of daily tasks in one sitting, earning rewards together. I co-designed the storyline that set up each session.</p>
+<div class="iteration"><p class="label">Round 1</p><h3>A week with the Harrison family</h3>
+<p>People loved building their own sprites but wanted a simpler process. Easier, more interactive tasks scored highest. Participants asked for a way to see each other’s schedules and for more ways to communicate.</p>
+<div class="takeaway"><b>Changes</b><p>Simplified sprite building, removed the story-immersion step, split rewards into personal and family earnings, added more reward choices and a shared “Week at a Glance” calendar.</p></div></div>
+<div class="iteration"><p class="label">Round 2</p><h3>Re-testing the redesign</h3>
+<p>Participants responded well to schedule sharing, the redesigned tasks and the new reward system.</p></div></section>
+<section class="cs-section" id="reflection"><p class="label">Reflection</p><ol class="learnings"><li><h3>Customization builds connection</h3><p>Expressing identity through sprites made the space feel like theirs.</p></li><li><h3>Rewards need two levels</h3><p>Personal and shared goals each kept people engaged in different ways.</p></li><li><h3>Daily tasks must be light</h3><p>Anything that demanded too much felt like homework, not connection.</p></li><li><h3>Design for every generation</h3><p>Age and comfort with technology vary widely within one family.</p></li></ol></section>
       </div>
+    </div>
+    <section class="next" aria-label="More work">
+      <h2>Thanks for reading! More work →</h2>
+      <div class="grid"><a class="card" href="nom.html">
+        <div class="thumb"><div class="cover" style="--c:#E2EBDD"><span>NOM</span><small>Restaurant discovery for college students</small></div></div>
+        <p class="label">Mobile UX redesign</p>
+        <div class="row"><h3>NOM</h3><span class="badge">UX Designer</span></div>
+        <p>Redesigning restaurant discovery so indecisive college students can choose where to eat in a swipe.</p>
+        <p class="tags">UX design · Usability testing · Mobile</p>
+      </a><a class="card" href="vidviz.html">
+        <div class="thumb"><div class="cover" style="--c:#DFE6F3"><span>VidViz</span><small>A visual learning space for long-form video</small></div></div>
+        <p class="label">HCI research tool</p>
+        <div class="row"><h3>VidViz</h3><span class="badge">HCI Researcher</span></div>
+        <p>Turning hour-long lecture videos into explorable, AI-structured maps for active learning.</p>
+        <p class="tags">HCI research · Generative AI · Learning tools</p>
+      </a></div>
     </section>
-
-    <section class="case-section">
-      <p class="label">Research</p>
-      <div class="body">
-        <h2>Interviews and the gap in existing apps</h2>
-        <p>We interviewed people living away from family about how often they talk, through which channels, what gets in the way, and what “too much” contact feels like.</p>
-        <p>In the competitive analysis, family-focused apps like Life360 and Google Families were useful but utilitarian — location and controls, not warmth. Social apps like BeReal and simulation games like SimCity had engaging mechanics but weren’t built around family relationships. That gap became our opportunity: the playfulness of a game around the people who matter.</p>
-      </div>
-    </section>
-
-    <section class="case-section">
-      <p class="label">Concept</p>
-      <div class="body">
-        <h2>A home that runs on small daily moments</h2>
-        <ul>
-          <li><strong>Daily prompts</strong> — a mood check, an outfit photo, a message of kindness, a drawing, a quiz, a family vote, writing together.</li>
-          <li><strong>Mode switching</strong> — a lively virtual room, or a simpler static view for family members less comfortable with apps.</li>
-          <li><strong>Custom sprites and a shared living room</strong> that the family decorates with rewards.</li>
-          <li><strong>Status and presence</strong> — online status, announcements and time zones.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="case-section">
-      <p class="label">Prototype testing</p>
-      <div class="body">
-        <h2>Simulating a week as a family</h2>
-        <p>Social apps are hard to test with one user, so we ran role-play sessions in FigJam. Participants were assigned roles in a fictional family (the Harrisons), built their sprites, met in the living room and played through a full week of daily tasks in one session, earning rewards together. I co-designed the storyline that set up each session.</p>
-        <h3>Round 1 → Round 2</h3>
-        <p>People loved making their own sprites but wanted a simpler process. Most tasks scored around 4 out of 5, and easier, more interactive tasks scored highest. Participants also asked for a way to see each other’s schedules. For the second round we simplified sprite building, dropped the story-immersion step, split rewards into personal and family earnings, added more reward choices, and added a shared “Week at a Glance” calendar.</p>
-      </div>
-    </section>
-
-    <section class="case-section">
-      <p class="label">Reflection</p>
-      <div class="body">
-        <h2>What I took away</h2>
-        <ul>
-          <li><strong>Customization builds connection</strong> — expressing identity made the space feel like theirs.</li>
-          <li><strong>Rewards need two levels</strong> — personal and shared goals each kept people engaged.</li>
-          <li><strong>Daily tasks must be light</strong> — anything demanding felt like homework.</li>
-          <li><strong>Design for every generation in the family</strong> — age and comfort with technology vary widely.</li>
-        </ul>
-      </div>
-    </section>
-
-    <nav class="case-nav" aria-label="Projects">
-      <a href="it-takes-two-alices.html">← It Takes Two Alices</a>
-      <a href="nom.html">Next: NOM →</a>
-    </nav>
   </main>
-
   <footer class="site-footer" id="contact">
-    <p>Open to UX, game design and production roles.</p>
+    <div>
+      <h2>Let’s connect.</h2>
+      <p>Open to UX design, game design and production roles.</p>
+    </div>
     <div class="links">
-      <a href="mailto:YOUR-EMAIL">YOUR-EMAIL</a>
+      <a href="mailto:YOUR-EMAIL">Email</a>
       <a href="https://www.linkedin.com/in/oulan-li-69a9032a8">LinkedIn</a>
-      <a href="../assets/Oulan-Li-Resume.pdf">Résumé (PDF)</a>
+      <a href="../assets/Oulan-Li-Resume.pdf">Résumé</a>
     </div>
   </footer>
 </div>
