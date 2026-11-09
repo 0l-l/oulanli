@@ -82,7 +82,7 @@ p { margin: 0; }
 .cs-section p { color: var(--body); }
 
 /* Wide blocks break out of the reading column */
-.wide { width: min(var(--max), 100vw - 2 * var(--gutter)); position: relative; left: 50%; transform: translateX(-50%); }
+.wide { width: min(var(--max) - 2 * var(--gutter), 100vw - 2 * var(--gutter)); position: relative; left: 50%; transform: translateX(-50%); }
 
 .hmw { margin-top: 40px; font-size: clamp(22px, 2.4vw, 28px); line-height: 1.4; color: var(--ink); }
 
