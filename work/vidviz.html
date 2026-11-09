@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>VidViz — Oulan Li</title>
-<meta name="description" content="Turning hour-long lecture videos into explorable, AI-structured maps for active learning.">
+<meta name="description" content="Turning hour-long lecture videos into maps learners can explore.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -14,70 +14,23 @@
 <div class="wrap">
   <header class="site-header">
     <a class="name" href="../index.html">Oulan Li</a>
-    <nav aria-label="Main">
-      <a href="../index.html#work" aria-current="page">Work</a>
-      <a href="../about.html">About</a>
-      <a href="../assets/Oulan-Li-Resume.pdf">Résumé</a>
-    </nav>
+    <nav aria-label="Main"><a href="../index.html#work" aria-current="page">Work</a><a href="../about.html">About</a><a href="../assets/Oulan-Li-Resume.pdf">Résumé</a></nav>
   </header>
   <main>
-    <header class="cs-head">
-      <p class="label">COGS 126 Thinking with Computers · UC San Diego · Spring 2024</p>
-      <h1>VidViz</h1>
-      <p class="sub">Turning hour-long lecture videos into explorable, AI-structured maps for active learning.</p>
-    </header>
-    <div class="cs-hero"><div class="cover" style="--c:#DFE6F3; padding: clamp(28px, 5vw, 64px)"><span style="font-size: clamp(44px, 7vw, 96px)">VidViz</span><small>A visual learning space for long-form video</small></div></div>
-    <div class="cs-layout">
-      <nav class="toc" aria-label="On this page"><a href="#overview">Overview</a><a href="#solution">Solution</a><a href="#problem">Problem</a><a href="#process">Process</a><a href="#next">Next steps</a><a href="#reflection">Reflection</a></nav>
-      <div class="cs-body">
-<section class="cs-section" id="overview"><p class="label">Overview</p><h2>A visual learning space for long-form video</h2>
-<p>VidViz is a research prototype from Prof. Jim Hollan’s course on how computing can augment human thinking. It uses generative AI to structure a long lecture into a hierarchy learners can explore.</p>
-<dl class="meta"><div><dt>Timeline</dt><dd>10 weeks · Spring 2024</dd></div><div><dt>My role</dt><dd>HCI Researcher</dd></div><div><dt>Team</dt><dd>Team Synergy — Xiaolin Wu, Oulan Li, Matthew Garcia, Esther Tae</dd></div><div><dt>Responsibilities</dt><dd>Video segmentation interface · Interactive prototypes · Future roadmap</dd></div></dl></section>
-<section class="cs-section" id="solution"><p class="label">Solution</p><h2>Layered learning</h2>
-<div class="features"><div class="feature"><p class="label">01</p><h3>A hierarchy of the lecture</h3><p>The video is segmented into main topic, subtopics and detail, so learners jump between ideas instead of scrubbing.</p></div><div class="feature"><p class="label">02</p><h3>AI that explains</h3><p>A language model generates a summary, explanation and example for each segment.</p></div><div class="feature"><p class="label">03</p><h3>Notes and keyword search</h3><p>Notes link to moments in the video, and search finds the ten seconds you need in a fifty-minute lecture.</p></div></div></section>
-<section class="cs-section" id="problem"><p class="label">Problem</p><h2>A mismatch between lectures and learning</h2>
-<p>Lecture recordings ask for passive listening at a fixed pace. Effective learning is active, exploratory and adapted to the learner. Today students cope by taking notes and guessing timestamps, or borrowing a classmate’s notes — neither makes review effective.</p>
-<div class="insights"><div class="insight"><p class="label">Gap 01</p><h3>Limited search</h3><p>Finding one explanation can mean scrubbing through the whole video.</p></div><div class="insight"><p class="label">Gap 02</p><h3>No structure</h3><p>Recordings have no organization beyond a timeline.</p></div><div class="insight"><p class="label">Gap 03</p><h3>No summaries</h3><p>Key points are never extracted for review.</p></div></div>
-<div class="hmw"><b>HOW MIGHT WE</b>turn passive lecture videos into a space learners can actively explore?</div></section>
-<section class="cs-section" id="process"><p class="label">Process</p><h2>Two renditions before the final interface</h2>
-<div class="iteration"><p class="label">Version 1</p><h3>Spider diagram</h3>
-<p>Topics as nodes connected by lines, with AI-generated connections shown separately.</p>
-<div class="takeaway"><b>Takeaway</b><p>Structure became visible, but the web of links grew hard to read for a full lecture.</p></div></div>
-<div class="iteration"><p class="label">Version 2</p><h3>Grouped nodes and a double timeline</h3>
-<p>Nodes grouped by their relationships, paired with a timeline view and a graph view.</p>
-<div class="takeaway"><b>Takeaway</b><p>Learners need both “where am I in the lecture” and “how do these ideas connect” — the final version layers them.</p></div></div></section>
-<section class="cs-section" id="next"><p class="label">Next steps</p><h2>From prototype to evidence</h2>
-<p>We closed the quarter with an evaluation plan rather than claims: an experiment with 10–20 learners comparing objective results with and without VidViz, plus surveys and ratings for the subjective experience. The roadmap then moves to a coded implementation with more accurate automatic segmentation.</p></section>
-<section class="cs-section" id="reflection"><p class="label">Reflection</p><ol class="learnings"><li><h3>Structure is the interface</h3><p>Each version changed how the lecture was organized, not just how it looked — and that changed what learners could do.</p></li><li><h3>Plan the evidence early</h3><p>A tool for learning has to prove it helps people learn; designing the evaluation is part of designing the product.</p></li></ol></section>
-      </div>
+    <header class="cs-head"><p class="label">UC San Diego · Spring 2024</p><h1>VidViz</h1><p class="sub">Turning hour-long lecture videos into maps learners can explore.</p></header>
+    <div class="cs-hero"><div class="cover" style="--c:#DFE6F3; padding: clamp(32px, 6vw, 72px)"><span style="font-size: clamp(48px, 8vw, 104px)">VidViz</span></div></div>
+    <dl class="meta"><div><dt>Role</dt><dd>HCI Researcher</dd></div><div><dt>Team</dt><dd>4 students</dd></div><div><dt>Timeline</dt><dd>10 weeks</dd></div><div><dt>Focus</dt><dd>Generative AI · Learning</dd></div></dl>
+    <div class="cs-body">
+<section class="cs-section"><p class="label">Problem</p><h2>Finding ten seconds in a fifty-minute lecture.</h2><p>Recorded lectures have no structure, no summaries and weak search. Review becomes scrubbing.</p><p class="hmw">How might we turn passive lecture video into a space learners can explore?</p></section>
+<section class="cs-section"><p class="label">Process</p><h2>Three ways to map a lecture.</h2><div class="steps"><div class="step"><p class="label">Version 1</p><div><h3>Spider diagram</h3><p>Structure became visible, but the web of links grew hard to read.</p></div></div><div class="step"><p class="label">Version 2</p><div><h3>Grouped nodes + double timeline</h3><p>Showed both where you are and how ideas connect.</p></div></div><div class="step"><p class="label">Final</p><div><h3>Layered learning</h3><p>Topic → subtopic → detail, with AI summaries, notes and keyword search.</p></div></div></div></section>
+<section class="cs-section"><p class="label">My work</p><h2>Segmentation, prototypes, roadmap.</h2><p>I built the flexible video segmentation interface, prototyped the spider diagram, search and note-taking views, and outlined the path to a full AI-powered platform.</p></section>
+<section class="cs-section"><p class="label">Next</p><h2>Plan the evidence early.</h2><p>We ended with an evaluation plan — a 10–20 person study with objective and survey measures — because a learning tool has to prove it helps people learn.</p></section>
     </div>
-    <section class="next" aria-label="More work">
-      <h2>Thanks for reading! More work →</h2>
-      <div class="grid"><a class="card" href="360-studio.html">
-        <div class="thumb"><img src="https://projects.etc.cmu.edu/360-studio/wp-content/uploads/2026/11/Weixin-Image_20261104174152_129_239-edited.jpg" alt="Two players cooking together around the 360° Ring, sharing tools on a rotating Lazy Susan" loading="lazy"></div>
-        <p class="label">Location-based game · Production</p>
-        <div class="row"><h3>360 Studio</h3><span class="badge live">● In progress · Producer</span></div>
-        <p>Producing a semester of rapid prototypes to find out what makes play around a 360° cylindrical screen work.</p>
-        <p class="tags">Production · Playtesting · Location-based entertainment</p>
-      </a><a class="card" href="it-takes-two-alices.html">
-        <div class="thumb"><img src="https://images.squarespace-cdn.com/content/v1/677fdd7bf5a081101e4784d3/3f559d69-78c5-4320-9f46-068e8549c45b/Screenshot+2026-08-24+081638.png?format=1500w" alt="Card dogs running along a track guided by signposts on the Tilt Five board" loading="lazy"></div>
-        <p class="label">AR educational game</p>
-        <div class="row"><h3>It Takes Two Alices</h3><span class="badge">UI/UX · 3D Art</span></div>
-        <p>Designing a two-player Tilt Five AR puzzle game that makes kids’ first step into programming social.</p>
-        <p class="tags">AR · Game UI/UX · 3D art · Learning</p>
-      </a></div>
-    </section>
+    <section class="next" aria-label="More work"><h2>More work</h2><div class="grid"><a class="card" href="360-studio.html"><div class="thumb"><img src="https://projects.etc.cmu.edu/360-studio/wp-content/uploads/2026/11/Weixin-Image_20261104174152_129_239-edited.jpg" alt="Two players sharing tools on a rotating Lazy Susan around the 360° Ring" loading="lazy"></div><h3>360 Studio</h3><p>What makes play around a 360° screen work? A semester of prototypes and playtests to find out.</p><p class="role"><span class="live">● In progress</span> · Producer · 2026</p></a><a class="card" href="it-takes-two-alices.html"><div class="thumb"><img src="https://images.squarespace-cdn.com/content/v1/677fdd7bf5a081101e4784d3/3f559d69-78c5-4320-9f46-068e8549c45b/Screenshot+2026-08-24+081638.png?format=1500w" alt="Card dogs following signposts on the Tilt Five AR board" loading="lazy"></div><h3>It Takes Two Alices</h3><p>A two-player AR puzzle game that makes kids’ first step into programming social.</p><p class="role">UI/UX · 3D Art · 2026</p></a></div></section>
   </main>
-  <footer class="site-footer" id="contact">
-    <div>
-      <h2>Let’s connect.</h2>
-      <p>Open to UX design, game design and production roles.</p>
-    </div>
-    <div class="links">
-      <a href="mailto:YOUR-EMAIL">Email</a>
-      <a href="https://www.linkedin.com/in/oulan-li-69a9032a8">LinkedIn</a>
-      <a href="../assets/Oulan-Li-Resume.pdf">Résumé</a>
-    </div>
+  <footer class="site-footer">
+    <h2>Let’s connect.</h2>
+    <div class="links"><a href="mailto:YOUR-EMAIL">Email</a><a href="https://www.linkedin.com/in/oulan-li-69a9032a8">LinkedIn</a><a href="../assets/Oulan-Li-Resume.pdf">Résumé</a></div>
   </footer>
 </div>
 </body>

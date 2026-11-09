@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>It Takes Two Alices — Oulan Li</title>
-<meta name="description" content="Designing a two-player Tilt Five AR puzzle game that makes kids’ first step into programming social.">
+<meta name="description" content="A two-player AR puzzle game that makes kids’ first step into programming social.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -14,71 +14,24 @@
 <div class="wrap">
   <header class="site-header">
     <a class="name" href="../index.html">Oulan Li</a>
-    <nav aria-label="Main">
-      <a href="../index.html#work" aria-current="page">Work</a>
-      <a href="../about.html">About</a>
-      <a href="../assets/Oulan-Li-Resume.pdf">Résumé</a>
-    </nav>
+    <nav aria-label="Main"><a href="../index.html#work" aria-current="page">Work</a><a href="../about.html">About</a><a href="../assets/Oulan-Li-Resume.pdf">Résumé</a></nav>
   </header>
   <main>
-    <header class="cs-head">
-      <p class="label">CMU Entertainment Technology Center · Spring 2026</p>
-      <h1>It Takes Two Alices</h1>
-      <p class="sub">Designing a two-player AR puzzle game that makes kids’ first step into programming social.</p>
-    </header>
-    <div class="cs-hero"><img src="https://images.squarespace-cdn.com/content/v1/677fdd7bf5a081101e4784d3/3f559d69-78c5-4320-9f46-068e8549c45b/Screenshot+2026-08-24+081638.png?format=1500w" alt="Card dogs running along a track guided by signposts in the Tilt Five AR scene"></div>
-    <div class="cs-layout">
-      <nav class="toc" aria-label="On this page"><a href="#overview">Overview</a><a href="#solution">Solution</a><a href="#impact">Outcome</a><a href="#problem">Problem</a><a href="#design">UI/UX</a><a href="#art">3D art</a><a href="#testing">Playtesting</a><a href="#reflection">Reflection</a></nav>
-      <div class="cs-body">
-<section class="cs-section" id="overview"><p class="label">Overview</p><h2>Extending Alice to a younger, more social audience</h2>
-<p>Alice is Carnegie Mellon’s long-running block-programming platform. Our open brief: combine it with Tilt Five, a tabletop AR system that projects a 3D scene onto a gameboard, where each player sees it from their own seat. We built a cooperative puzzle game for students aged 10–13 that introduces the building blocks of coding.</p>
-<dl class="meta"><div><dt>Timeline</dt><dd>Jan – May 2026</dd></div><div><dt>My role</dt><dd>UI/UX Designer · 3D Artist</dd></div><div><dt>Team</dt><dd>Oscar Mailman, Sapphire Ruan, Chufan Chen, Yuchen Xue, Yiran (Emily) Zhang, Oulan Li · Instructor Dave Culyba</dd></div><div><dt>Responsibilities</dt><dd>In-game UI/UX for programming interactions · 3D assets · Playtesting with the target age group</dd></div></dl></section>
-<section class="cs-section" id="solution"><p class="label">Solution</p><h2>Code you can pick up, together</h2>
-<div class="features"><div class="feature"><p class="label">01</p><h3>Commands as objects</h3><p>Programming blocks become tiles that slot into signposts on the board. Running a program means watching card dogs follow the signs.</p></div><div class="feature"><p class="label">02</p><h3>Two seats, one puzzle</h3><p>Inspired by pair programming, both players share one program and see it from their own side of the table.</p></div><div class="feature"><p class="label">03</p><h3>Learn by running</h3><p>Students experiment, run, watch the result and try again — learning debugging, IF statements, operators and loops along the way.</p></div></div></section>
-<section class="cs-section" id="impact"><p class="label">Outcome</p><div class="stats"><div class="stat"><strong>5</strong><span>levels covering debugging, conditionals, operators and loops</span></div><div class="stat"><strong>~15</strong><span>minutes of play — sized for a classroom or summer camp session</span></div><div class="stat"><strong>10–13</strong><span>years old: the target audience we playtested with</span></div><div class="stat"><strong>3</strong><span>deliverables: the game, a teacher’s guide and a Tilt Five developer guide</span></div></div>
-<p>The project was featured by <a href="https://www.hotmetalcampus.com/news-research/students-collaborate-to-code-with-it-takes-2-alices">Hot Metal Campus</a>, and the team plans a future release on Steam.</p></section>
-<section class="cs-section" id="problem"><p class="label">Problem</p><h2>Programming feels intimidating — and lonely</h2>
-<p>Beginner block coding usually happens alone at a screen. For 10–13-year-olds, the barrier is less about syntax and more about confidence: it is easy to feel lost, and easy for one person to take over.</p>
-<div class="hmw"><b>HOW MIGHT WE</b>make a first step into programming feel social, playful and low-stakes for 10–13-year-olds?</div></section>
-<section class="cs-section" id="design"><p class="label">UI/UX</p><h2>Interfaces that live on the table</h2>
-<p>On a shared AR board there is no menu bar to drag from. My UI/UX work turned the programming interface into objects in the world, guided by three principles:</p>
-<div class="insights"><div class="insight"><p class="label">Principle 01</p><h3>Readable from either seat</h3><p>Tiles and signposts rely on clear silhouettes and symbols rather than small text, so both players can read the program from their own angle.</p></div><div class="insight"><p class="label">Principle 02</p><h3>Feedback that teaches</h3><p>Each run shows cause and effect clearly, so a wrong path reads as something to debug, not as failure.</p></div><div class="insight"><p class="label">Principle 03</p><h3>Room for two</h3><p>Layouts let both players reach and change the program, so neither one takes control.</p></div></div>
-<figure class="fig"><img src="https://images.squarespace-cdn.com/content/v1/677fdd7bf5a081101e4784d3/3f31cfc2-866f-40e5-82e5-93a8d96ccbce/8518751f2fca9f12de647e4543375cf7-1-939x1024.jpg" alt="Concept drawing of signposts, sign tiles and card dog characters" loading="lazy"><figcaption>Concept art — signposts, tiles and card dogs</figcaption></figure></section>
-<section class="cs-section" id="art"><p class="label">3D art</p><h2>A Wonderland that stays legible on a tabletop</h2>
-<p>The world draws on <em>Alice’s Adventures in Wonderland</em>: dogs made of playing cards, wooden signposts, a tunnel and a whimsical track. As a 3D artist I helped build these assets for a platform with real constraints — the scene is projected onto a board in front of you and seen up close, from different angles at once.</p>
-<p>That pushed the art toward simple, chunky forms and strong contrast, so the card dogs and signs stay recognizable at board scale, and away from fine detail that would be lost in the projection.</p></section>
-<section class="cs-section" id="testing"><p class="label">Playtesting</p><h2>Measuring conversation, not just completion</h2>
-<p>Our playtests with the target age group tracked two questions: how often are the players talking to each other, and is one person taking control? Early sessions were hard — the age group was new to all of us — but as students kept playing they began sharing ideas, and pairs who hadn’t known each other ended up talking throughout.</p></section>
-<section class="cs-section" id="reflection"><p class="label">Reflection</p><ol class="learnings"><li><h3>Design for the audience you are not</h3><p>None of us came from teaching. Watching 10–13-year-olds play taught us more about how to explain a concept than any of our own assumptions.</p></li><li><h3>Constraints shape the art</h3><p>Designing for projected AR on a tabletop meant every asset had to read clearly at small scale and from any seat — clarity first, detail second.</p></li><li><h3>Measure the behavior you want</h3><p>Counting conversation, not just puzzle completion, kept the design focused on its real goal: learning together.</p></li></ol></section>
-      </div>
+    <header class="cs-head"><p class="label">CMU ETC · Spring 2026</p><h1>It Takes Two Alices</h1><p class="sub">A two-player AR puzzle game that makes kids’ first step into programming social.</p></header>
+    <div class="cs-hero"><img src="https://images.squarespace-cdn.com/content/v1/677fdd7bf5a081101e4784d3/3f559d69-78c5-4320-9f46-068e8549c45b/Screenshot+2026-08-24+081638.png?format=1500w" alt="Card dogs following signposts on the Tilt Five AR board"></div>
+    <dl class="meta"><div><dt>Role</dt><dd>UI/UX Designer · 3D Artist</dd></div><div><dt>Team</dt><dd>6 students</dd></div><div><dt>Timeline</dt><dd>Jan – May 2026</dd></div><div><dt>Platform</dt><dd>Tilt Five AR</dd></div></dl>
+    <div class="cs-body">
+<section class="cs-section"><p class="label">Problem</p><h2>Programming feels intimidating — and lonely.</h2><p>For 10–13-year-olds the barrier isn’t syntax; it’s confidence. Block coding usually happens alone at a screen.</p><p class="hmw">How might we make a first step into programming feel social and playful?</p></section>
+<section class="cs-section"><p class="label">Solution</p><h2>Code you can pick up, together.</h2><div class="points"><div><span class="n">01</span><h3>Commands as objects</h3><p>Tiles slot into signposts on the board.</p></div><div><span class="n">02</span><h3>Two seats, one puzzle</h3><p>Both players share one program, each from their own side.</p></div><div><span class="n">03</span><h3>Learn by running</h3><p>Watch the card dogs follow your code, then try again.</p></div></div></section>
+<section class="cs-section"><p class="label">My work</p><h2>Interfaces that live on the table.</h2><p>I designed the in-game UI/UX and built 3D assets for a scene projected onto a tabletop — so everything had to read clearly from either seat, with simple forms and strong contrast.</p><figure class="fig"><img src="https://images.squarespace-cdn.com/content/v1/677fdd7bf5a081101e4784d3/3f31cfc2-866f-40e5-82e5-93a8d96ccbce/8518751f2fca9f12de647e4543375cf7-1-939x1024.jpg" alt="Concept art of signposts, tiles and card dogs" loading="lazy"><figcaption>Concept art — signposts, tiles and card dogs</figcaption></figure></section>
+<section class="cs-section"><p class="label">Outcome</p><h2>Built for a classroom.</h2><div class="stats"><div class="stat"><strong>5</strong><span>levels: debugging, conditionals, operators, loops</span></div><div class="stat"><strong>~15</strong><span>minutes of play</span></div><div class="stat"><strong>10–13</strong><span>year-olds playtested</span></div></div><p style="margin-top:32px">Shipped with a teacher’s guide and a Tilt Five developer guide, and featured by <a href="https://www.hotmetalcampus.com/news-research/students-collaborate-to-code-with-it-takes-2-alices">Hot Metal Campus</a>.</p></section>
+<section class="cs-section"><p class="label">Reflection</p><h2>Measure the behavior you want.</h2><p>We tracked how often players talked to each other — not just whether they finished. It kept the design focused on learning together.</p></section>
     </div>
-    <section class="next" aria-label="More work">
-      <h2>Thanks for reading! More work →</h2>
-      <div class="grid"><a class="card" href="familink.html">
-        <div class="thumb"><div class="cover" style="--c:#F2E5D6"><span>famiLink</span><small>A virtual home for distributed families</small></div></div>
-        <p class="label">Social computing · UX research</p>
-        <div class="row"><h3>famiLink</h3><span class="badge">UX Researcher</span></div>
-        <p>Bringing long-distance families closer through a shared virtual home and small daily rituals.</p>
-        <p class="tags">User research · Role-play prototyping · Mobile</p>
-      </a><a class="card" href="nom.html">
-        <div class="thumb"><div class="cover" style="--c:#E2EBDD"><span>NOM</span><small>Restaurant discovery for college students</small></div></div>
-        <p class="label">Mobile UX redesign</p>
-        <div class="row"><h3>NOM</h3><span class="badge">UX Designer</span></div>
-        <p>Redesigning restaurant discovery so indecisive college students can choose where to eat in a swipe.</p>
-        <p class="tags">UX design · Usability testing · Mobile</p>
-      </a></div>
-    </section>
+    <section class="next" aria-label="More work"><h2>More work</h2><div class="grid"><a class="card" href="familink.html"><div class="thumb"><div class="cover" style="--c:#F2E5D6"><span>famiLink</span></div></div><h3>famiLink</h3><p>A shared virtual home that helps long-distance families stay close.</p><p class="role">UX Research · 2024</p></a><a class="card" href="nom.html"><div class="thumb"><div class="cover" style="--c:#E2EBDD"><span>NOM</span></div></div><h3>NOM</h3><p>Restaurant discovery for indecisive college students — one swipe at a time.</p><p class="role">UX Design · 2024</p></a></div></section>
   </main>
-  <footer class="site-footer" id="contact">
-    <div>
-      <h2>Let’s connect.</h2>
-      <p>Open to UX design, game design and production roles.</p>
-    </div>
-    <div class="links">
-      <a href="mailto:YOUR-EMAIL">Email</a>
-      <a href="https://www.linkedin.com/in/oulan-li-69a9032a8">LinkedIn</a>
-      <a href="../assets/Oulan-Li-Resume.pdf">Résumé</a>
-    </div>
+  <footer class="site-footer">
+    <h2>Let’s connect.</h2>
+    <div class="links"><a href="mailto:YOUR-EMAIL">Email</a><a href="https://www.linkedin.com/in/oulan-li-69a9032a8">LinkedIn</a><a href="../assets/Oulan-Li-Resume.pdf">Résumé</a></div>
   </footer>
 </div>
 </body>
