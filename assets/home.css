@@ -323,3 +323,10 @@ strong { font-weight: 600; }
 @media (max-width: 760px) { .takeaways { grid-template-columns: 1fr 1fr; margin-top: -6vh; } }
 
 .cs-fig .still { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; display: block; }
+
+/* ---------- Challenge / step blocks (text before a figure) ---------- */
+.cs-step { text-align: center; margin-bottom: 7vh; }
+.cs-step .small:first-child { margin-bottom: 6px; }
+.cs-step .small:last-child { margin-top: 4px; }
+.duo .sub .ph { aspect-ratio: 3 / 2; display: flex; align-items: center; justify-content: center; background: var(--ph); color: var(--ph-text); }
+.cs-fig > .ph { aspect-ratio: 16 / 9; }

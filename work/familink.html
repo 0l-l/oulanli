@@ -4,35 +4,160 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>famiLink — Oulan Li</title>
-<meta name="description" content="A shared virtual home that helps long-distance families stay close.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/style.css">
+<meta name="description" content="famiLink: a shared virtual home that helps long-distance families stay close.">
+<link rel="stylesheet" href="../assets/home.css">
+<script>
+  try { if (localStorage.getItem('theme') === 'dark') document.documentElement.dataset.theme = 'dark'; } catch (e) {}
+</script>
 </head>
 <body>
-<div class="wrap">
-  <header class="site-header">
-    <a class="name" href="../index.html">Oulan Li</a>
-    <nav aria-label="Main"><a href="../index.html#work" aria-current="page">Work</a><a href="../about.html">About</a><a href="../assets/Oulan-Li-Resume.pdf">Résumé</a></nav>
-  </header>
-  <main>
-    <header class="cs-head"><p class="label">UC San Diego · Winter 2024</p><h1>famiLink</h1><p class="sub">A shared virtual home that helps long-distance families stay close.</p></header>
-    <div class="cs-hero"><div class="cover" style="--c:#F2E5D6; padding: clamp(32px, 6vw, 72px)"><span style="font-size: clamp(48px, 8vw, 104px)">famiLink</span></div></div>
-    <dl class="meta"><div><dt>Role</dt><dd>UX Researcher</dd></div><div><dt>Team</dt><dd>4 students</dd></div><div><dt>Timeline</dt><dd>10 weeks</dd></div><div><dt>Methods</dt><dd>Interviews · Role-play testing</dd></div></dl>
-    <div class="cs-body">
-<section class="cs-section"><p class="label">Problem</p><h2>Distance turns connection into a chore.</h2><p>For families living apart, calls start to feel like obligations and everyday moments go unshared.</p><p class="hmw">How might we make staying in touch feel like play, not duty?</p></section>
-<section class="cs-section"><p class="label">Research</p><h2>Existing apps are useful — or warm. Not both.</h2><p>I led our interviews and competitive analysis. Family tools like Life360 felt utilitarian; engaging apps like BeReal weren’t built around family.</p></section>
-<section class="cs-section"><p class="label">Solution</p><h2>A home that runs on small daily moments.</h2><div class="points"><div><span class="n">01</span><h3>Daily prompts</h3><p>A mood, a photo, a drawing, a family vote.</p></div><div><span class="n">02</span><h3>Shared living room</h3><p>Custom sprites and a home decorated together.</p></div><div><span class="n">03</span><h3>Mode switching</h3><p>A simpler view for less tech-savvy family members.</p></div></div></section>
-<section class="cs-section"><p class="label">Testing</p><h2>We simulated a family to test a family app.</h2><p>In two rounds of role-play sessions, participants played one week as a fictional family. I co-wrote the session storyline. Round two simplified sprite building and added a shared calendar.</p><div class="stats"><div class="stat"><strong>2</strong><span>rounds of role-play testing</span></div><div class="stat"><strong>7</strong><span>daily tasks tested</span></div><div class="stat"><strong>~4/5</strong><span>typical task rating</span></div></div><blockquote>“Imagining doing this w my family makes me happy!”<cite>Prototype participant</cite></blockquote></section>
-<section class="cs-section"><p class="label">Reflection</p><h2>Daily rituals must be light.</h2><p>Anything that felt like homework broke the spell. The best-rated tasks were the simplest.</p></section>
-    </div>
-    <section class="next" aria-label="More work"><h2>More work</h2><div class="grid"><a class="card" href="nom.html"><div class="thumb"><div class="cover" style="--c:#E2EBDD"><span>NOM</span></div></div><h3>NOM</h3><p>Restaurant discovery for indecisive college students — one swipe at a time.</p><p class="role">UX Design · 2024</p></a><a class="card" href="vidviz.html"><div class="thumb"><div class="cover" style="--c:#DFE6F3"><span>VidViz</span></div></div><h3>VidViz</h3><p>Turning hour-long lecture videos into maps learners can explore.</p><p class="role">HCI Research · 2024</p></a></div></section>
+
+  <a class="ui ui-tl" href="../index.html">Oulan Li</a>
+  <button class="ui ui-tc" id="theme-toggle" type="button" aria-label="Toggle dark mode">Dark</button>
+  <a class="ui ui-tr" href="../about.html">About</a>
+  <a class="ui ui-bl" href="../index.html#p3">← Work</a>
+  <a class="ui ui-br" href="../index.html#p4">Next ↗</a>
+  <p class="ui ui-rm" id="observer" aria-live="off" title="A small note on your visit. Nothing is recorded.">visit · 00:00</p>
+
+  <main class="cs">
+
+    <!-- Header -->
+    <header class="cs-col cs-head">
+      <h1>famiLink</h1>
+      <p>UX Research &amp; UX Design</p>
+    </header>
+
+    <!-- Why: one short paragraph. TODO(Oulan): confirm wording. -->
+    <p class="cs-col cs-why">For families who live apart, staying in touch slowly turns into a chore: calls feel like obligations, and the small everyday moments go unshared. We asked: how might we make staying close feel like play, not duty?</p>
+
+    <!-- My part: three titled items. TODO(Oulan): replace with what you did. -->
+    <p class="cs-col cs-label small">My part</p>
+    <ol class="cs-col cs-did">
+      <li><span class="t">UX Research</span>Placeholder: interviews, competitive analysis, and what they told us.</li>
+      <li><span class="t">Experience Design</span>Placeholder: the core idea and the flows you designed.</li>
+      <li><span class="t">Testing</span>Placeholder: how you tested it and what changed.</li>
+    </ol>
+
+    <dl class="cs-col cs-facts">
+      <div><dt>Context</dt><dd>UC San Diego</dd></div>
+      <div><dt>Team</dt><dd>4 students</dd></div>
+      <div><dt>Timeline</dt><dd>10 weeks, 2024</dd></div>
+      <div><dt>Platform</dt><dd>Placeholder</dd></div>
+      <div><dt>Methods</dt><dd>Interviews, role-play tests</dd></div>
+      <div><dt>Tools</dt><dd>Figma</dd></div>
+    </dl>
+
+    <!-- 1. Overview: prototype walkthrough video or hero screens -->
+    <figure class="cs-fig wide">
+      <div class="ph"><span>Prototype walkthrough (video or hero screens)</span></div>
+      <figcaption>
+        <p>A home your family shares, wherever they are</p>
+        <p class="small">Placeholder: one or two sentences on what famiLink is.</p>
+      </figcaption>
+    </figure>
+
+    <!-- 2. Research -->
+    <section class="cs-col cs-step">
+      <p class="small">Research</p>
+      <p>Placeholder: what we learned</p>
+      <p class="small">Placeholder: interviews and competitive analysis. Example: family tools felt useful but cold; fun apps weren’t built for families.</p>
+    </section>
+    <figure class="cs-fig wide">
+      <div class="ph"><span>Research visual: competitive map / interview insights</span></div>
+      <figcaption>
+        <p>Useful, or warm. Not both.</p>
+        <p class="small">Placeholder caption.</p>
+      </figcaption>
+    </figure>
+
+    <!-- 3. Challenge → Solution, one by one -->
+    <section class="cs-col cs-step">
+      <p class="small">Challenge 01</p>
+      <p>Placeholder: staying in touch feels like a chore</p>
+      <p class="small">Placeholder: why this happens, in one or two sentences.</p>
+    </section>
+    <figure class="cs-fig wide gallery">
+      <div class="slides media" data-slides>
+          <div class="slide is-active" data-label="Solution 01 · screen 1"><div class="ph"><span>Figma screen 1</span></div></div>
+          <div class="slide" data-label="Solution 01 · screen 2"><div class="ph"><span>Figma screen 2</span></div></div>
+          <div class="slide" data-label="Solution 01 · screen 3"><div class="ph"><span>Figma screen 3</span></div></div>
+          <span class="count">1 / 3</span>
+        </div>
+      <figcaption>
+        <p class="stage small">Solution 01 · screen 1</p>
+        <p>Solution: placeholder (e.g. daily prompts)</p>
+        <p class="small">Placeholder: how the design solves the challenge.</p>
+      </figcaption>
+    </figure>
+
+    <section class="cs-col cs-step">
+      <p class="small">Challenge 02</p>
+      <p>Placeholder: everyday moments go unshared</p>
+      <p class="small">Placeholder: why this happens.</p>
+    </section>
+    <figure class="cs-fig wide gallery">
+      <div class="slides media" data-slides>
+          <div class="slide is-active" data-label="Solution 02 · screen 1"><div class="ph"><span>Figma screen 1</span></div></div>
+          <div class="slide" data-label="Solution 02 · screen 2"><div class="ph"><span>Figma screen 2</span></div></div>
+          <div class="slide" data-label="Solution 02 · screen 3"><div class="ph"><span>Figma screen 3</span></div></div>
+          <span class="count">1 / 3</span>
+        </div>
+      <figcaption>
+        <p class="stage small">Solution 02 · screen 1</p>
+        <p>Solution: placeholder (e.g. a shared living room)</p>
+        <p class="small">Placeholder: how the design solves the challenge.</p>
+      </figcaption>
+    </figure>
+
+    <section class="cs-col cs-step">
+      <p class="small">Challenge 03</p>
+      <p>Placeholder: not everyone in the family is tech-savvy</p>
+      <p class="small">Placeholder: why this matters.</p>
+    </section>
+    <figure class="cs-fig wide">
+      <div class="duo">
+        <figure class="sub"><div class="ph"><span>Default view</span></div><p class="small">Placeholder</p></figure>
+        <figure class="sub"><div class="ph"><span>Simple view</span></div><p class="small">Placeholder</p></figure>
+      </div>
+      <figcaption>
+        <p>Solution: placeholder (e.g. mode switching)</p>
+        <p class="small">Placeholder: how the design solves the challenge.</p>
+      </figcaption>
+    </figure>
+
+    <!-- 4. Testing → iteration -->
+    <section class="cs-col cs-step">
+      <p class="small">Testing</p>
+      <p>Placeholder: how we tested a family app</p>
+      <p class="small">Placeholder: method (e.g. role-play sessions as a fictional family) and what we watched for.</p>
+    </section>
+    <figure class="cs-fig wide">
+      <div class="duo">
+        <figure class="sub"><div class="ph"><span>Round 1</span></div><p class="small">Before</p></figure>
+        <figure class="sub"><div class="ph"><span>Round 2</span></div><p class="small">After</p></figure>
+      </div>
+      <figcaption>
+        <p>What changed after testing</p>
+        <p class="small">Placeholder: the key iteration and why.</p>
+      </figcaption>
+    </figure>
+
+    <!-- 5. Outcome -->
+    <section class="cs-col cs-end">
+      <p>Outcome</p>
+      <p class="small">Placeholder: results, numbers, and one quote from a participant.</p>
+    </section>
+
+    <nav class="cs-col cs-next" aria-label="Next project">
+      <p class="small">Next</p>
+      <p><a href="../index.html#p4">Yiko Yiko →</a></p>
+    </nav>
+
+    <footer class="cs-col cs-foot">
+      <p class="small">Designed and built by Oulan Li. ©2026</p>
+    </footer>
   </main>
-  <footer class="site-footer">
-    <h2>Let’s connect.</h2>
-    <div class="links"><a href="mailto:YOUR-EMAIL">Email</a><a href="https://www.linkedin.com/in/oulan-li-69a9032a8">LinkedIn</a><a href="../assets/Oulan-Li-Resume.pdf">Résumé</a></div>
-  </footer>
-</div>
+
+<script src="../assets/home.js"></script>
 </body>
 </html>
