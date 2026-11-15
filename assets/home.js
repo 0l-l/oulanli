@@ -39,12 +39,14 @@ document.querySelectorAll('[data-slides]').forEach((box) => {
     const stage = box.closest('figure') && box.closest('figure').querySelector('.stage');
     if (stage && slides[i].dataset.label) stage.innerHTML = slides[i].dataset.label;
     slides.forEach((s, k) => s.querySelectorAll('video').forEach((v) => {
-      if (k === i) { const p = v.play(); if (p) p.catch(() => {}); } else v.pause();
+      if (k === i) { if (box._auto) v.currentTime = 0; if (box._visible !== false) { const p = v.play(); if (p) p.catch(() => {}); } } else v.pause();
     }));
+    if (box._auto) box._auto();
   };
   // Start the first clip once the gallery is on screen.
   if (box.querySelector('video') && 'IntersectionObserver' in window) {
     new IntersectionObserver((es) => es.forEach((e) => {
+      box._visible = e.isIntersecting;
       slides[i].querySelectorAll('video').forEach((v) => {
         if (e.isIntersecting) { const p = v.play(); if (p) p.catch(() => {}); } else v.pause();
       });
@@ -68,6 +70,21 @@ document.querySelectorAll('[data-slides]').forEach((box) => {
     box.after(dots);
     box._dots = dots;
     dots.children[0].classList.add('on');
+
+    // Auto-play through the gallery: when a clip finishes, move on to the next one.
+    // The active dot fills up like a progress bar, so the advance never surprises anyone.
+    let timer = null;
+    const setP = (k, p) => box._dots.children[k] && box._dots.children[k].style.setProperty('--p', p);
+    slides.forEach((s, k) => s.querySelectorAll('video').forEach((v) => {
+      v.removeAttribute('loop');
+      v.addEventListener('timeupdate', () => { if (k === i && v.duration) setP(k, v.currentTime / v.duration); });
+      v.addEventListener('ended', () => { if (k === i) show(i + 1); });
+    }));
+    box._auto = () => {
+      clearTimeout(timer);
+      [...box._dots.children].forEach((d, k) => { if (k !== i) setP(k, 0); });
+      if (!slides[i].querySelector('video')) timer = setTimeout(() => show(i + 1), 5000); // stills stay 5s
+    };
   }
   const leftHalf = (e) => e.clientX - box.getBoundingClientRect().left < box.offsetWidth / 2;
   box.addEventListener('mousemove', (e) => box.classList.toggle('at-left', leftHalf(e)));
