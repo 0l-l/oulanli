@@ -27,9 +27,9 @@
     <!-- Hero: replace .hero-media contents with a looping B&W <video> or <img>. -->
     <section class="hero" aria-label="Intro">
       <div class="hero-media">
-        <img class="season" data-season="spring" src="assets/images/hero-spring.jpg" alt="Cherry blossoms over the water, photographed by Oulan" loading="lazy">
-        <img class="season" data-season="summer" src="assets/images/hero-summer.jpg" alt="Palms and a green lawn in a tropical garden, photographed by Oulan" loading="lazy">
-        <img class="season is-on" data-season="fall" src="assets/images/hero-fall.jpg" alt="A path under autumn trees, red and yellow leaves on the grass, photographed by Oulan">
+        <div class="season" data-season="spring" ><span class="bg" style="background-image:url('assets/images/hero-spring.jpg')"></span><img src="assets/images/hero-spring.jpg" alt="Cherry blossoms over the water, photographed by Oulan" loading="lazy"></div>
+        <div class="season" data-season="summer" ><span class="bg" style="background-image:url('assets/images/hero-summer.jpg')"></span><img src="assets/images/hero-summer.jpg" alt="Palms and a green lawn in a tropical garden, photographed by Oulan" loading="lazy"></div>
+        <div class="season is-on" data-season="fall" ><span class="bg" style="background-image:url('assets/images/hero-fall.jpg')"></span><img src="assets/images/hero-fall.jpg" alt="A path under autumn trees, red and yellow leaves on the grass, photographed by Oulan"></div>
       </div>
       <p class="hero-note" aria-label="Photos by me, one per season">
         <button type="button" data-season="spring">Spring</button><span>·</span><button type="button" data-season="summer">Summer</button><span>·</span><button type="button" data-season="fall" class="is-on" aria-pressed="true">Fall</button> 2026 <span class="by">· Photo by me</span>

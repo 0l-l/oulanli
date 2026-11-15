@@ -521,3 +521,7 @@ body[data-accent] .desc .hl { color: var(--fg); }
 .hero-rule { display: block; width: 72px; height: 1px; background: rgba(255,255,255,.75); margin: 4px 0; }
 .foot { padding-top: 4vh; }
 .foot .small { margin-top: 0; }
+/* Show each photo whole, at its own ratio; a soft blur of the same photo fills the rest */
+.hero-media .season { overflow: hidden; background: #111; }
+.hero-media .season .bg { position: absolute; inset: -40px; background-position: center; background-size: cover; filter: blur(28px) brightness(.62); }
+.hero-media .season img { position: relative; width: 100%; height: 100%; object-fit: contain; object-position: 50% 50%; }
