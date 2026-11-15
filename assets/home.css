@@ -461,3 +461,25 @@ strong { font-weight: 600; }
 .hero-note button.is-on { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
 .hero-note span { margin: 0 2px; }
 @media (prefers-reduced-motion: reduce) { .hero-media .season { transition: none; } }
+
+/* ---------- Per-project accent ----------
+   Set data-accent on <body>. Used for key-phrase underlines, labels, the live dot,
+   text selection and a small accent cursor. */
+body[data-accent="360"] { --accent: #2b7fff; --accent-soft: rgba(43,127,255,.38); }
+[data-theme="dark"] body[data-accent="360"] { --accent: #5aa8ff; --accent-soft: rgba(90,168,255,.45); }
+
+body[data-accent] .hl {
+  text-decoration: underline; text-decoration-color: var(--accent-soft);
+  text-decoration-thickness: .45em; text-underline-offset: -.18em; text-decoration-skip-ink: none;
+}
+body[data-accent] .cs-label,
+body[data-accent] .cs-facts dt,
+body[data-accent] .cs-did .t,
+body[data-accent] .live { color: var(--accent); }
+body[data-accent] a.ul { text-decoration-color: var(--accent); }
+body[data-accent] a.ul:hover { color: var(--accent); }
+body[data-accent] ::selection { background: var(--accent); color: #fff; }
+body[data-accent="360"],
+body[data-accent="360"] a, body[data-accent="360"] button {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Ccircle cx='10' cy='10' r='5' fill='%232b7fff'/%3E%3Ccircle cx='10' cy='10' r='8.5' fill='none' stroke='%232b7fff' stroke-opacity='.35'/%3E%3C/svg%3E") 10 10, auto;
+}
