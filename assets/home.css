@@ -280,3 +280,14 @@ body.on-hero .ui { color: #fff; }
 .g-dot.on::before { opacity: .45; }
 .gallery figcaption { margin-top: 6px; }
 .gallery .stage { margin: 0 0 2.6em; }   /* stage label belongs to the image, not the paragraph below */
+
+/* ---------- Screen-to-table pairs ---------- */
+.pairs { display: grid; gap: 28px; }
+.pair { display: grid; grid-template-columns: 1fr 40px 1fr; align-items: center; }
+.pair .cell img { width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: var(--ph); display: block; }
+.pair .cell .small { margin-top: 8px; text-align: center; }
+.pair .to { text-align: center; color: var(--mute); }
+.pair.head .small { text-align: center; margin: 0; }
+.duo { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.duo .ph { aspect-ratio: 4 / 3; }
+@media (max-width: 760px) { .pair { grid-template-columns: 1fr 24px 1fr; } .pairs { gap: 18px; } }
