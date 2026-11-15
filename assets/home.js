@@ -226,3 +226,22 @@ document.querySelectorAll('[data-slides]').forEach((box) => {
     note.querySelectorAll('button').forEach((x) => { const on = x === b; x.classList.toggle('is-on', on); x.setAttribute('aria-pressed', on); });
   }));
 })();
+
+/* ---------- Email corner: hover to reveal, click to copy ---------- */
+(() => {
+  const el = document.querySelector('.email[data-email]');
+  if (!el) return;
+  const addr = el.dataset.email, label = el.textContent;
+  let t;
+  el.addEventListener('mouseenter', () => { el.textContent = addr; });
+  el.addEventListener('mouseleave', () => { clearTimeout(t); el.textContent = label; });
+  el.addEventListener('focus', () => { el.textContent = addr; });
+  el.addEventListener('blur', () => { el.textContent = label; });
+  el.addEventListener('click', (e) => {
+    e.preventDefault();
+    const done = () => { el.textContent = 'Copied ✓'; clearTimeout(t); t = setTimeout(() => { el.textContent = el.matches(':hover') ? addr : label; }, 1400); };
+    try {
+      navigator.clipboard.writeText(addr).then(done, () => { el.textContent = addr; });
+    } catch (err) { el.textContent = addr; }
+  });
+})();
