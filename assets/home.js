@@ -189,6 +189,7 @@ document.querySelectorAll('[data-slides]').forEach((box) => {
       g.style.setProperty('--d', d + 'ms');
       last = Math.max(last, d);
     });
+    if (box.dataset.reveal === 'noreplay') return;
     // A quiet "replay" link once it has finished.
     const btn = document.createElement('button');
     btn.type = 'button'; btn.className = 'flow-replay'; btn.textContent = '↻ replay';
@@ -205,7 +206,7 @@ document.querySelectorAll('[data-slides]').forEach((box) => {
   });
   function play(box) {
     box.classList.add('is-shown');
-    setTimeout(() => box.nextElementSibling && box.nextElementSibling.classList.add('on'), box._done);
+    if (box._done) setTimeout(() => box.nextElementSibling && box.nextElementSibling.classList.add('on'), box._done);
   }
   const io = new IntersectionObserver((entries) => {
     entries.forEach((en) => {

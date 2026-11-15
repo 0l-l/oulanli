@@ -284,10 +284,20 @@ body.on-hero .ui { color: #fff; }
 /* ---------- Screen-to-table pairs ---------- */
 .pairs { display: grid; gap: 28px; }
 .pair { display: grid; grid-template-columns: 1fr 40px 1fr; align-items: center; }
-.pair .cell img { width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: var(--ph); display: block; }
+.pair .cell img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; display: block; }
 .pair .cell .small { margin-top: 8px; text-align: center; }
 .pair .to { text-align: center; color: var(--mute); }
 .pair.head .small { text-align: center; margin: 0; }
 .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .duo .ph { aspect-ratio: 4 / 3; }
+.duo .sub { margin: 0; }
+.duo .sub img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; display: block; }
+.duo .sub .small { margin-top: 8px; text-align: center; }
 @media (max-width: 760px) { .pair { grid-template-columns: 1fr 24px 1fr; } .pairs { gap: 18px; } }
+
+/* Pairs build up one at a time, like the loop diagram */
+.pairs [data-delay] { transition: opacity .9s ease, transform .9s ease; transition-delay: var(--d, 0ms); }
+.js-reveal .pairs [data-delay] { opacity: 0; transform: translateY(6px); }
+.js-reveal .is-shown.pairs [data-delay] { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .js-reveal .pairs [data-delay] { opacity: 1; transform: none; transition: none; } }
+.duo + figcaption { margin-top: 2.6em; }
