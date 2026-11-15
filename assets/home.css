@@ -33,6 +33,7 @@ body {
 p { margin: 0; }
 a { color: inherit; text-decoration: none; }
 a:hover { opacity: .5; }
+a.ul { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
 button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
 :focus-visible { outline: 1px solid currentColor; outline-offset: 4px; }
 img, video { display: block; width: 100%; height: 100%; object-fit: cover; }
