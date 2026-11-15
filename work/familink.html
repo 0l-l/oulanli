@@ -24,128 +24,150 @@
     <!-- Header -->
     <header class="cs-col cs-head">
       <h1>famiLink</h1>
-      <p>UX Research &amp; UX Design</p>
+      <p>UX Research &amp; Experience Design</p>
     </header>
 
-    <!-- Why: one short paragraph. TODO(Oulan): confirm wording. -->
-    <p class="cs-col cs-why">For families who live apart, staying in touch slowly turns into a chore: calls feel like obligations, and the small everyday moments go unshared. We asked: how might we make staying close feel like play, not duty?</p>
+    <p class="cs-col cs-why">For families who live apart, staying close slowly turns into a chore: weekly video calls feel like appointments, and the small everyday moments go unshared. We asked: how might we make staying in touch feel like play, not duty?</p>
 
-    <!-- My part: three titled items. TODO(Oulan): replace with what you did. -->
     <p class="cs-col cs-label small">My part</p>
     <ol class="cs-col cs-did">
-      <li><span class="t">UX Research</span>Placeholder: interviews, competitive analysis, and what they told us.</li>
-      <li><span class="t">Experience Design</span>Placeholder: the core idea and the flows you designed.</li>
-      <li><span class="t">Testing</span>Placeholder: how you tested it and what changed.</li>
+      <li><span class="t">User Research</span>Interviewed long-distance families, from international students to parents, and turned what they said into the problems famiLink had to solve.</li>
+      <li><span class="t">Competitive Analysis</span>Mapped the space from Life360 to BeReal to find what was missing: family apps were useful but cold, and warm apps weren’t built for families.</li>
+      <li><span class="t">Test Design</span>Co-wrote the storylines for our role-play tests, so participants could live a week as a family on famiLink in twenty minutes.</li>
     </ol>
 
     <dl class="cs-col cs-facts">
-      <div><dt>Context</dt><dd>UC San Diego</dd></div>
+      <div><dt>Context</dt><dd>COGS 123, UC San Diego</dd></div>
       <div><dt>Team</dt><dd>4 students</dd></div>
-      <div><dt>Timeline</dt><dd>10 weeks, 2024</dd></div>
-      <div><dt>Platform</dt><dd>Placeholder</dd></div>
+      <div><dt>Timeline</dt><dd>10 weeks, Winter 2024</dd></div>
+      <div><dt>For</dt><dd>Long-distance families</dd></div>
       <div><dt>Methods</dt><dd>Interviews, role-play tests</dd></div>
-      <div><dt>Tools</dt><dd>Figma</dd></div>
+      <div><dt>Tools</dt><dd>Figma, FigJam</dd></div>
     </dl>
 
-    <!-- 1. Overview: prototype walkthrough video or hero screens -->
+    <!-- Overview -->
     <figure class="cs-fig wide">
-      <div class="ph"><span>Prototype walkthrough (video or hero screens)</span></div>
+      <div class="ph"><span>Prototype walkthrough: living room, sprites, daily prompt</span></div>
       <figcaption>
         <p>A home your family shares, wherever they are</p>
-        <p class="small">Placeholder: one or two sentences on what famiLink is.</p>
+        <p class="small">famiLink is a cozy virtual living room. Each family member appears as a sprite, and together they complete one small prompt a day, earning coins to decorate their shared home.</p>
       </figcaption>
     </figure>
 
-    <!-- 2. Research -->
+    <!-- Research: interviews -->
     <section class="cs-col cs-step">
-      <p class="small">Research</p>
-      <p>Placeholder: what we learned</p>
-      <p class="small">Placeholder: interviews and competitive analysis. Example: family tools felt useful but cold; fun apps weren’t built for families.</p>
+      <p class="small">Research · interviews</p>
+      <p>Weekly calls work, but they feel like appointments</p>
+      <p class="small">We talked to international students, parents and young adults living away from home. The same gaps kept coming up.</p>
     </section>
+    <div class="cs-col quotes" data-reveal="noreplay">
+      <blockquote data-delay="0"><p>“Time difference between countries limits our communication mainly to weekends. I hope for more frequent contact.”</p><cite class="small">Parent, 51</cite></blockquote>
+      <blockquote data-delay="1200"><p>“I find myself forgetting what to share for the week during the long video calls. Small, fun tasks are definitely better.”</p><cite class="small">Student, 22</cite></blockquote>
+      <blockquote data-delay="2400"><p>“We already have numerous options for straightforward communication. What would set this apart is a sense of warmth.”</p><cite class="small">International student, 23</cite></blockquote>
+    </div>
+
+    <!-- Research: competitive map -->
     <figure class="cs-fig wide">
-      <div class="ph"><span>Research visual: competitive map / interview insights</span></div>
+      <div class="flow-wrap" data-reveal="noreplay">
+      <svg class="flow" viewBox="0 0 680 440" role="img" aria-labelledby="mapT mapD">
+        <title id="mapT">Competitive map</title>
+        <desc id="mapD">Two axes: from utilitarian to warm and playful, and from not about family to built for family. Life360 and Google Families are built for family but utilitarian. BeReal and SimCity are warm and playful but not about family. famiLink sits in the empty corner: built for family, and warm.</desc>
+        <defs><marker id="ah2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.2"/></marker></defs>
+        <g data-delay="0"><path class="a" d="M60 220H630" marker-end="url(#ah2)"/><path class="a" d="M340 400V30" marker-end="url(#ah2)"/>
+          <text class="ts r" x="630" y="242">Warm, playful</text><text class="ts l" x="60" y="242">Utilitarian</text>
+          <text class="ts" x="340" y="18">Built for family</text><text class="ts" x="340" y="420">Not about family</text></g>
+        <g data-delay="900"><circle cx="150" cy="90" r="5" class="d"/><text class="ts l" x="162" y="90">Life360</text></g><g data-delay="1300"><circle cx="200" cy="150" r="5" class="d"/><text class="ts l" x="212" y="150">Google Families</text></g>
+        <g data-delay="1900"><circle cx="500" cy="320" r="5" class="d"/><text class="ts l" x="512" y="320">BeReal</text></g><g data-delay="2300"><circle cx="450" cy="370" r="5" class="d"/><text class="ts l" x="462" y="370">SimCity</text></g>
+        <g data-delay="3200"><rect class="c" x="380" y="40" width="240" height="160" rx="2"/></g>
+        <g data-delay="4200"><circle cx="520" cy="110" r="7" class="kd"/><text class="tt l" x="532" y="110">famiLink</text></g>
+      </svg>
+      </div>
       <figcaption>
         <p>Useful, or warm. Not both.</p>
-        <p class="small">Placeholder caption.</p>
+        <p class="small">Family tools like Life360 and Google Families are useful but utilitarian. Playful apps like BeReal and SimCity are warm, but not built around family. famiLink aims for the empty corner.</p>
       </figcaption>
     </figure>
 
-    <!-- 3. Challenge → Solution, one by one -->
+    <!-- Challenge 01 -->
     <section class="cs-col cs-step">
       <p class="small">Challenge 01</p>
-      <p>Placeholder: staying in touch feels like a chore</p>
-      <p class="small">Placeholder: why this happens, in one or two sentences.</p>
+      <p>Staying in touch feels like an obligation</p>
+      <p class="small">Long calls need planning, and people run out of things to say.</p>
     </section>
     <figure class="cs-fig wide gallery">
       <div class="slides media" data-slides>
-          <div class="slide is-active" data-label="Solution 01 · screen 1"><div class="ph"><span>Figma screen 1</span></div></div>
-          <div class="slide" data-label="Solution 01 · screen 2"><div class="ph"><span>Figma screen 2</span></div></div>
-          <div class="slide" data-label="Solution 01 · screen 3"><div class="ph"><span>Figma screen 3</span></div></div>
+          <div class="slide is-active" data-label="Mon · what’s your mood?"><div class="ph"><span>Daily prompt screen: mood</span></div></div>
+          <div class="slide" data-label="Tue · outfit of the day + vote"><div class="ph"><span>Daily prompt screen: photo + vote</span></div></div>
+          <div class="slide" data-label="Thu · draw a family portrait"><div class="ph"><span>Daily prompt screen: drawing</span></div></div>
           <span class="count">1 / 3</span>
         </div>
       <figcaption>
-        <p class="stage small">Solution 01 · screen 1</p>
-        <p>Solution: placeholder (e.g. daily prompts)</p>
-        <p class="small">Placeholder: how the design solves the challenge.</p>
+        <p class="stage small">Mon · what’s your mood?</p>
+        <p>Solution: one small prompt a day</p>
+        <p class="small">Instead of one long call a week, a light task every day: share your mood, vote on outfits, draw a family portrait together. Easy to finish, fun to share, and each one earns coins for the family.</p>
       </figcaption>
     </figure>
 
+    <!-- Challenge 02 -->
     <section class="cs-col cs-step">
       <p class="small">Challenge 02</p>
-      <p>Placeholder: everyday moments go unshared</p>
-      <p class="small">Placeholder: why this happens.</p>
+      <p>Distance makes family feel far away</p>
+      <p class="small">Texts and calls carry news, but not the feeling of being in the same room.</p>
     </section>
     <figure class="cs-fig wide gallery">
       <div class="slides media" data-slides>
-          <div class="slide is-active" data-label="Solution 02 · screen 1"><div class="ph"><span>Figma screen 1</span></div></div>
-          <div class="slide" data-label="Solution 02 · screen 2"><div class="ph"><span>Figma screen 2</span></div></div>
-          <div class="slide" data-label="Solution 02 · screen 3"><div class="ph"><span>Figma screen 3</span></div></div>
+          <div class="slide is-active" data-label="Build your sprite"><div class="ph"><span>Sprite building</span></div></div>
+          <div class="slide" data-label="Meet in the living room"><div class="ph"><span>Virtual living room</span></div></div>
+          <div class="slide" data-label="Decorate with rewards"><div class="ph"><span>Rewards and decorating</span></div></div>
           <span class="count">1 / 3</span>
         </div>
       <figcaption>
-        <p class="stage small">Solution 02 · screen 1</p>
-        <p>Solution: placeholder (e.g. a shared living room)</p>
-        <p class="small">Placeholder: how the design solves the challenge.</p>
+        <p class="stage small">Build your sprite</p>
+        <p>Solution: a shared living room</p>
+        <p class="small">Everyone builds a sprite that looks like them and meets in one virtual living room, decorated together with the coins the family earns.</p>
       </figcaption>
     </figure>
 
+    <!-- Challenge 03 -->
     <section class="cs-col cs-step">
       <p class="small">Challenge 03</p>
-      <p>Placeholder: not everyone in the family is tech-savvy</p>
-      <p class="small">Placeholder: why this matters.</p>
+      <p>One family, many ages</p>
+      <p class="small">A playful room that delights a student can overwhelm a grandparent.</p>
     </section>
     <figure class="cs-fig wide">
       <div class="duo">
-        <figure class="sub"><div class="ph"><span>Default view</span></div><p class="small">Placeholder</p></figure>
-        <figure class="sub"><div class="ph"><span>Simple view</span></div><p class="small">Placeholder</p></figure>
+        <figure class="sub"><div class="ph"><span>Room mode</span></div><p class="small">Room mode · playful and dynamic</p></figure>
+        <figure class="sub"><div class="ph"><span>Simple mode</span></div><p class="small">Simple mode · familiar and static</p></figure>
       </div>
       <figcaption>
-        <p>Solution: placeholder (e.g. mode switching)</p>
-        <p class="small">Placeholder: how the design solves the challenge.</p>
+        <p>Solution: switch modes</p>
+        <p class="small">Each person chooses how famiLink looks: the lively virtual room, or a simpler, more traditional interface. Same family, same prompts, different comfort levels.</p>
       </figcaption>
     </figure>
 
-    <!-- 4. Testing → iteration -->
+    <!-- Testing -->
     <section class="cs-col cs-step">
       <p class="small">Testing</p>
-      <p>Placeholder: how we tested a family app</p>
-      <p class="small">Placeholder: method (e.g. role-play sessions as a fictional family) and what we watched for.</p>
+      <p>How do you test a family app without real families?</p>
+      <p class="small">We turned testing into role-play. Participants were cast as the Harrison family, sat apart to feel the distance, and lived a full week on famiLink in twenty minutes on FigJam, one prompt per “day”.</p>
     </section>
     <figure class="cs-fig wide">
       <div class="duo">
-        <figure class="sub"><div class="ph"><span>Round 1</span></div><p class="small">Before</p></figure>
-        <figure class="sub"><div class="ph"><span>Round 2</span></div><p class="small">After</p></figure>
+        <figure class="sub"><div class="ph"><span>Round 1 · week 8</span></div><p class="small">Round 1 · week 8</p></figure>
+        <figure class="sub"><div class="ph"><span>Round 2 · week 10</span></div><p class="small">Round 2 · week 10</p></figure>
       </div>
       <figcaption>
-        <p>What changed after testing</p>
-        <p class="small">Placeholder: the key iteration and why.</p>
+        <p>What changed after round one</p>
+        <p class="small">Most prompts scored 4 out of 5, and the simplest scored highest. People asked for easier sprite building, less repetition and a way to see each other’s schedules. Round two simplified sprites, split personal and family rewards, and added a shared calendar, “Week at a Glance”.</p>
       </figcaption>
     </figure>
 
-    <!-- 5. Outcome -->
+    <!-- Outcome -->
     <section class="cs-col cs-end">
       <p>Outcome</p>
-      <p class="small">Placeholder: results, numbers, and one quote from a participant.</p>
+      <p class="small">Two rounds of role-play testing, seven daily prompts, and one clear lesson: daily rituals have to be light. Customization and shared rewards are what keep a family coming back.</p>
+      <p class="pull">“I liked how adorable it is! Imagining doing this w my family makes me happy!”</p>
+      <p class="small">Playtest participant</p>
     </section>
 
     <nav class="cs-col cs-next" aria-label="Next project">

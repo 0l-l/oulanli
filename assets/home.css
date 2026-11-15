@@ -330,3 +330,16 @@ strong { font-weight: 600; }
 .cs-step .small:last-child { margin-top: 4px; }
 .duo .sub .ph { aspect-ratio: 3 / 2; display: flex; align-items: center; justify-content: center; background: var(--ph); color: var(--ph-text); }
 .cs-fig > .ph { aspect-ratio: 16 / 9; }
+
+/* ---------- Interview quotes ---------- */
+.quotes { display: grid; gap: 28px; margin-bottom: 22vh; }
+.quotes blockquote { margin: 0; text-align: center; }
+.quotes cite { display: block; font-style: normal; margin-top: 6px; }
+.quotes [data-delay] { transition: opacity .9s ease, transform .9s ease; transition-delay: var(--d, 0ms); }
+.js-reveal .quotes [data-delay] { opacity: 0; transform: translateY(6px); }
+.js-reveal .is-shown.quotes [data-delay] { opacity: 1; transform: none; }
+.flow .d { fill: var(--mute); }
+.flow .kd { fill: var(--fg); }
+.cs-end .pull { margin-top: 2.2em; }
+@media (prefers-reduced-motion: reduce) { .js-reveal .quotes [data-delay] { opacity: 1; transform: none; transition: none; } }
+.flow .tt.l { text-anchor: start; } .flow .tt.r { text-anchor: end; }
