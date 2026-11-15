@@ -315,3 +315,9 @@ strong { font-weight: 600; }
 .js-reveal .is-shown.pieces [data-delay] { opacity: 1; transform: none; }
 @media (max-width: 760px) { .pieces { grid-template-columns: repeat(2, 1fr); } }
 @media (prefers-reduced-motion: reduce) { .js-reveal .pieces [data-delay] { opacity: 1; transform: none; transition: none; } }
+
+/* ---------- Playtest takeaways ---------- */
+.takeaways { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: -12vh auto 22vh; }
+.takeaways dt { font-size: 11px; color: var(--mute); }
+.takeaways dd { margin: 2px 0 0; }
+@media (max-width: 760px) { .takeaways { grid-template-columns: 1fr 1fr; margin-top: -6vh; } }
