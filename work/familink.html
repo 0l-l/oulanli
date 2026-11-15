@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>famiLink — Oulan Li</title>
-<meta name="description" content="famiLink: a shared virtual home that helps long-distance families stay close.">
+<meta name="description" content="famiLink: a shared virtual home that helps long-distance families stay close. A UX research and experience design case study.">
 <link rel="stylesheet" href="../assets/home.css">
 <script>
   try { if (localStorage.getItem('theme') === 'dark') document.documentElement.dataset.theme = 'dark'; } catch (e) {}
@@ -19,15 +19,14 @@
   <a class="ui ui-br" href="../index.html#p4">Next ↗</a>
   <p class="ui ui-rm" id="observer" aria-live="off" title="A small note on your visit. Nothing is recorded.">visit · 00:00</p>
 
-  <main class="cs">
+  <main class="cs long">
 
-    <!-- Header -->
     <header class="cs-col cs-head">
       <h1>famiLink</h1>
       <p>UX Research &amp; Experience Design</p>
     </header>
 
-    <p class="cs-col cs-why">For families who live apart, staying close slowly turns into a chore: weekly video calls feel like appointments, and the small everyday moments go unshared. We asked: how might we make staying in touch feel like play, not duty?</p>
+    <p class="cs-col cs-why">For families who live apart, staying close slowly turns into a chore: weekly video calls feel like appointments, and the small everyday moments go unshared. Over ten weeks, our team researched, designed and play-tested a shared virtual home that makes staying in touch feel like play, not duty.</p>
 
     <p class="cs-col cs-label small">My part</p>
     <ol class="cs-col cs-did">
@@ -38,42 +37,69 @@
 
     <dl class="cs-col cs-facts">
       <div><dt>Context</dt><dd>COGS 123, UC San Diego</dd></div>
-      <div><dt>Team</dt><dd>4 students</dd></div>
+      <div><dt>Team</dt><dd>Oulan Li, Tingyin Liu, Victoria Yu, Wendy Hong</dd></div>
       <div><dt>Timeline</dt><dd>10 weeks, Winter 2024</dd></div>
       <div><dt>For</dt><dd>Long-distance families</dd></div>
-      <div><dt>Methods</dt><dd>Interviews, role-play tests</dd></div>
+      <div><dt>Methods</dt><dd>Interviews, competitive analysis, role-play tests, surveys</dd></div>
       <div><dt>Tools</dt><dd>Figma, FigJam</dd></div>
     </dl>
 
-    <!-- Overview -->
+    <nav class="cs-col tl" aria-label="Process">
+      <a href="#understand"><span>01</span>Understand</a><a href="#research"><span>02</span>Research</a><a href="#landscape"><span>03</span>Landscape</a><a href="#concept"><span>04</span>Concept</a><a href="#test-design"><span>05</span>Test design</a><a href="#round-1"><span>06</span>Round 1</a><a href="#iterate"><span>07</span>Iterate</a><a href="#round-2"><span>08</span>Round 2</a><a href="#final"><span>09</span>Final</a><a href="#reflect"><span>10</span>Reflect</a>
+    </nav>
+
     <figure class="cs-fig wide">
-      <div class="ph"><span>Prototype walkthrough: living room, sprites, daily prompt</span></div>
+      <div class="phones">
+        <div><video src="../assets/images/familink/final-main.mp4" poster="../assets/images/familink/final-main-poster.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Final prototype: the family living room"></video><p class="small">Living room</p></div>
+        <div><video src="../assets/images/familink/final-sprite.mp4" poster="../assets/images/familink/final-sprite-poster.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Final prototype: building a sprite"></video><p class="small">Build your sprite</p></div>
+        <div><video src="../assets/images/familink/final-mode.mp4" poster="../assets/images/familink/final-mode-poster.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Final prototype: switching between room mode and simple mode"></video><p class="small">Switch modes</p></div>
+      </div>
       <figcaption>
         <p>A home your family shares, wherever they are</p>
-        <p class="small">famiLink is a cozy virtual living room. Each family member appears as a sprite, and together they complete one small prompt a day, earning coins to decorate their shared home.</p>
+        <p class="small">Each family member appears as a sprite in one cozy living room. Together they complete one small prompt a day, and earn coins to decorate their shared home. Final prototype in Figma.</p>
       </figcaption>
     </figure>
 
-    <!-- Research: interviews -->
-    <section class="cs-col cs-step">
-      <p class="small">Research · interviews</p>
-      <p>Weekly calls work, but they feel like appointments</p>
-      <p class="small">We talked to international students, parents and young adults living away from home. The same gaps kept coming up.</p>
+    <section class="cs-col phase" id="understand">
+      <p class="small">01 · Understand</p>
+      <h2>Who we designed for</h2>
+      <p>Distributed families: international students studying abroad, college kids in other cities, parents whose children have moved away, people working far from home. They still want to stay close, but distance wears the connection down.</p>
+      <p>Most of these families already talk, through texts during the week and a video call on the weekend. We weren’t replacing those. We were looking for what falls between them: the small, everyday moments that never make it into a weekly call.</p>
     </section>
-    <div class="cs-col quotes" data-reveal="noreplay">
-      <blockquote data-delay="0"><p>“Time difference between countries limits our communication mainly to weekends. I hope for more frequent contact.”</p><cite class="small">Parent, 51</cite></blockquote>
-      <blockquote data-delay="1200"><p>“I find myself forgetting what to share for the week during the long video calls. Small, fun tasks are definitely better.”</p><cite class="small">Student, 22</cite></blockquote>
-      <blockquote data-delay="2400"><p>“We already have numerous options for straightforward communication. What would set this apart is a sense of warmth.”</p><cite class="small">International student, 23</cite></blockquote>
-    </div>
 
-    <!-- Research: competitive map -->
+    <section class="cs-col phase" id="research">
+      <p class="small">02 · Research · February 2024</p>
+      <h2>Weekly calls work, but they feel like appointments</h2>
+      <p>We ran semi-structured interviews with seven people aged 18 to 51: students living far from their families in China and Hong Kong, a recent graduate, and two parents whose children study in the U.S. We also read prior work on family communication, from how families choose messaging apps to shared family boards.</p>
+    </section>
+
+    <dl class="cs-col stats" data-reveal="noreplay">
+      <div data-delay="0"><dt>7</dt><dd>interviews, ages 18–51</dd></div>
+      <div data-delay="500"><dt>4 of 7</dt><dd>named time zones or clashing schedules as the main obstacle</dd></div>
+      <div data-delay="1000"><dt>5 of 7</dt><dd>preferred small daily prompts over a weekly update</dd></div>
+    </dl>
+    <div class="cs-col quotes" data-reveal="noreplay">
+      <blockquote data-delay="0"><p>“Time difference between countries limits our communication mainly to weekends. I wish we can contact more frequently.”</p><cite class="small">Parent, 51</cite></blockquote>
+      <blockquote data-delay="1200"><p>“I found myself lose my memory to share my week through the long video call. Effortless small, fun tasks rather than a reserved one hour meeting.”</p><cite class="small">Student, 22</cite></blockquote>
+      <blockquote data-delay="2400"><p>“Considering we already have numerous options for straightforward communication, what would truly set this app apart is its ability to evoke a sense of warmth.”</p><cite class="small">International student, 23</cite></blockquote>
+    </div>
+    <section class="cs-col phase tight">
+      <p>Three things kept coming up. Long weekly calls are the default, but people forget what to share and the call starts to feel like a meeting. Time zones make real-time contact hard to plan. And nobody wanted another messenger: what they missed was warmth.</p>
+    </section>
+
+    <section class="cs-col phase" id="landscape">
+      <p class="small">03 · Landscape</p>
+      <h2>Useful, or warm. Not both.</h2>
+      <p>Next we looked at what families already use. Family tools like Life360 and Google Families are useful, but they are about locations and parental controls, not about being close. Playful apps like BeReal and SimCity create real engagement, but they aren’t built around family relationships.</p>
+    </section>
+
     <figure class="cs-fig wide">
       <div class="flow-wrap" data-reveal="noreplay">
       <svg class="flow" viewBox="0 0 680 440" role="img" aria-labelledby="mapT mapD">
         <title id="mapT">Competitive map</title>
         <desc id="mapD">Two axes: from utilitarian to warm and playful, and from not about family to built for family. Life360 and Google Families are built for family but utilitarian. BeReal and SimCity are warm and playful but not about family. famiLink sits in the empty corner: built for family, and warm.</desc>
-        <defs><marker id="ah2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.2"/></marker></defs>
-        <g data-delay="0"><path class="a" d="M60 220H630" marker-end="url(#ah2)"/><path class="a" d="M340 400V30" marker-end="url(#ah2)"/>
+        <defs><marker id="ahf" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.2"/></marker></defs>
+        <g data-delay="0"><path class="a" d="M60 220H630" marker-end="url(#ahf)"/><path class="a" d="M340 400V30" marker-end="url(#ahf)"/>
           <text class="ts r" x="630" y="242">Warm, playful</text><text class="ts l" x="60" y="242">Utilitarian</text>
           <text class="ts" x="340" y="18">Built for family</text><text class="ts" x="340" y="420">Not about family</text></g>
         <g data-delay="900"><circle cx="150" cy="90" r="5" class="d"/><text class="ts l" x="162" y="90">Life360</text></g><g data-delay="1300"><circle cx="200" cy="150" r="5" class="d"/><text class="ts l" x="212" y="150">Google Families</text></g>
@@ -83,89 +109,186 @@
       </svg>
       </div>
       <figcaption>
-        <p>Useful, or warm. Not both.</p>
-        <p class="small">Family tools like Life360 and Google Families are useful but utilitarian. Playful apps like BeReal and SimCity are warm, but not built around family. famiLink aims for the empty corner.</p>
+        <p>An empty corner</p>
+        <p class="small">Nothing combined the purpose of a family app with the warmth of a game. That corner became famiLink’s target.</p>
       </figcaption>
     </figure>
 
-    <!-- Challenge 01 -->
-    <section class="cs-col cs-step">
-      <p class="small">Challenge 01</p>
-      <p>Staying in touch feels like an obligation</p>
-      <p class="small">Long calls need planning, and people run out of things to say.</p>
+    <section class="cs-col phase" id="concept">
+      <p class="small">04 · Concept</p>
+      <h2>From insights to features</h2>
+      <p>Every feature traces back to something we heard.</p>
     </section>
+
+    <dl class="cs-col map-list" data-reveal="noreplay">
+      <div data-delay="0"><dt>People forget what to share on long weekly calls</dt><dd>One small <strong>daily prompt</strong>: share your mood, an outfit photo, a drawing.</dd></div>
+      <div data-delay="700"><dt>Parents can get overwhelmed by new technology</dt><dd><strong>Mode switching</strong>: a playful room, or a simple, familiar interface.</dd></div>
+      <div data-delay="1400"><dt>Texting feels transactional, not warm</dt><dd><strong>Sprites in a shared living room</strong> where the whole family appears together.</dd></div>
+      <div data-delay="2100"><dt>Goals to build towards keep people coming back</dt><dd><strong>Family rewards</strong>: coins from prompts decorate the shared home.</dd></div>
+    </dl>
     <figure class="cs-fig wide gallery">
       <div class="slides media" data-slides>
-          <div class="slide is-active" data-label="Mon · what’s your mood?"><div class="ph"><span>Daily prompt screen: mood</span></div></div>
-          <div class="slide" data-label="Tue · outfit of the day + vote"><div class="ph"><span>Daily prompt screen: photo + vote</span></div></div>
-          <div class="slide" data-label="Thu · draw a family portrait"><div class="ph"><span>Daily prompt screen: drawing</span></div></div>
+          <div class="slide is-active" data-label="Daily prompt · share a photo"><img src="../assets/images/familink/concept-photo-prompt.jpg" alt="Concept screen: a daily photo prompt" loading="lazy"></div>
+          <div class="slide" data-label="Daily prompt · outfit of the day"><img src="../assets/images/familink/concept-ootd.jpg" alt="Concept screen: outfit of the day camera" loading="lazy"></div>
+          <div class="slide" data-label="Daily prompt · draw together"><img src="../assets/images/familink/concept-drawing.jpg" alt="Concept screen: drawing a birthday cake together" loading="lazy"></div>
+          <div class="slide" data-label="Mode switching"><img src="../assets/images/familink/concept-mode-switch.jpg" alt="Concept screens: room mode, simple mode and settings" loading="lazy"></div>
+          <span class="count">1 / 4</span>
+        </div>
+      <figcaption>
+        <p class="stage small">Daily prompt · share a photo</p>
+        <p>Early concept screens</p>
+        <p class="small">The first screens for daily prompts and mode switching, made to explain the idea before we built anything testable.</p>
+      </figcaption>
+    </figure>
+
+    <section class="cs-col phase" id="test-design">
+      <p class="small">05 · Test design</p>
+      <h2>How do you test a family app without real families?</h2>
+      <p>We couldn’t bring real families into a classroom, and a family app means nothing without a family. So we built one. Each test group of four became <strong>the Harrison family</strong>, with a strict father, a mother who wants to talk more with her kids, a grandmother who struggles with technology, and children living far away.</p>
+      <p>I co-wrote their storylines. Every character had an age, a home city and a personal story for each day of the week, so prompts had something real to react to: on Wednesday, for example, players read what was happening in another family member’s life and sent them a message of kindness. Players sat apart from each other to feel the distance.</p>
+    </section>
+
+    <figure class="cs-fig wide gallery">
+      <div class="slides media" data-slides>
+          <div class="slide is-active" data-label="Character cards · the Harrison family"><img src="../assets/images/familink/test-characters.jpg" alt="Character cards for the Harrison family with storylines" loading="lazy"></div>
+          <div class="slide" data-label="Sprite builder · round 1"><img src="../assets/images/familink/test-sprite-builder.jpg" alt="FigJam sprite builder used in round 1" loading="lazy"></div>
+          <div class="slide" data-label="Virtual living room · round 1"><img src="../assets/images/familink/test-living-room.jpg" alt="The pixel-art virtual living room in round 1" loading="lazy"></div>
           <span class="count">1 / 3</span>
         </div>
       <figcaption>
-        <p class="stage small">Mon · what’s your mood?</p>
-        <p>Solution: one small prompt a day</p>
-        <p class="small">Instead of one long call a week, a light task every day: share your mood, vote on outfits, draw a family portrait together. Easy to finish, fun to share, and each one earns coins for the family.</p>
+        <p class="stage small">Character cards · the Harrison family</p>
+        <p>Casting a family</p>
+        <p class="small">Each player got a character card and a story, built their sprite, and met the rest of the family in the virtual living room, all inside FigJam.</p>
       </figcaption>
     </figure>
 
-    <!-- Challenge 02 -->
-    <section class="cs-col cs-step">
-      <p class="small">Challenge 02</p>
-      <p>Distance makes family feel far away</p>
-      <p class="small">Texts and calls carry news, but not the feeling of being in the same room.</p>
+    <section class="cs-col phase" id="round-1">
+      <p class="small">06 · Round 1 · Week 8, February 2024</p>
+      <h2>A week in twenty minutes</h2>
+      <p>Two teams played through the prototype. After meeting their family, they lived a full famiLink week, one prompt per “day”: Monday’s mood check-in, Tuesday’s outfit photo and vote, Wednesday’s message of kindness, Thursday’s drawing, Friday’s pop quiz, Saturday’s family vote and Sunday’s shared story. Each prompt earned coins to spend on the living room. Afterwards, every player rated each part in a survey.</p>
     </section>
+
     <figure class="cs-fig wide gallery">
       <div class="slides media" data-slides>
-          <div class="slide is-active" data-label="Build your sprite"><div class="ph"><span>Sprite building</span></div></div>
-          <div class="slide" data-label="Meet in the living room"><div class="ph"><span>Virtual living room</span></div></div>
-          <div class="slide" data-label="Decorate with rewards"><div class="ph"><span>Rewards and decorating</span></div></div>
+          <div class="slide is-active" data-label="Mon · mood check-in"><img src="../assets/images/familink/test-mood.jpg" alt="Mood reactions for the Monday prompt" loading="lazy"></div>
+          <div class="slide" data-label="Tue · outfit photo gallery"><img src="../assets/images/familink/test-ootd-gallery.jpg" alt="The family gallery of outfit photos" loading="lazy"></div>
+          <div class="slide" data-label="Rewards · decorate the room"><img src="../assets/images/familink/test-rewards.jpg" alt="Coins spent on furniture for the living room" loading="lazy"></div>
           <span class="count">1 / 3</span>
         </div>
       <figcaption>
-        <p class="stage small">Build your sprite</p>
-        <p>Solution: a shared living room</p>
-        <p class="small">Everyone builds a sprite that looks like them and meets in one virtual living room, decorated together with the coins the family earns.</p>
+        <p class="stage small">Mon · mood check-in</p>
+        <p>The prompts in play</p>
+        <p class="small">Small, fast tasks played on a shared FigJam board.</p>
       </figcaption>
     </figure>
 
-    <!-- Challenge 03 -->
-    <section class="cs-col cs-step">
-      <p class="small">Challenge 03</p>
-      <p>One family, many ages</p>
-      <p class="small">A playful room that delights a student can overwhelm a grandparent.</p>
-    </section>
     <figure class="cs-fig wide">
-      <div class="duo">
-        <figure class="sub"><div class="ph"><span>Room mode</span></div><p class="small">Room mode · playful and dynamic</p></figure>
-        <figure class="sub"><div class="ph"><span>Simple mode</span></div><p class="small">Simple mode · familiar and static</p></figure>
+      <div class="flow-wrap" data-reveal="noreplay">
+      <svg class="flow chart" viewBox="0 0 680 278" role="img" aria-labelledby="w8T">
+<title id="w8T">Round 1 ratings for each daily prompt, out of 5. Outfit photo 4.25, drawing together 4.25, family vote 3.88, message of kindness 3.80, pop quiz 3.80, mood check-in 3.25, write together 2.86.</title>
+<g data-delay="0"><line class="grid" x1="210.0" y1="8" x2="210.0" y2="252"/><text class="ts" x="210.0" y="266">0</text><line class="grid" x1="292.0" y1="8" x2="292.0" y2="252"/><text class="ts" x="292.0" y="266">1</text><line class="grid" x1="374.0" y1="8" x2="374.0" y2="252"/><text class="ts" x="374.0" y="266">2</text><line class="grid" x1="456.0" y1="8" x2="456.0" y2="252"/><text class="ts" x="456.0" y="266">3</text><line class="grid" x1="538.0" y1="8" x2="538.0" y2="252"/><text class="ts" x="538.0" y="266">4</text><line class="grid" x1="620.0" y1="8" x2="620.0" y2="252"/><text class="ts" x="620.0" y="266">5</text></g>
+<g data-delay="350"><text class="ts r" x="198" y="21">Mon · mood check-in</text><rect class="bm" x="210" y="12" width="266.5" height="18" rx="1"/><text class="ts l" x="484.5" y="21">3.25</text></g>
+<g data-delay="700"><text class="ts r" x="198" y="55">Tue · outfit photo + vote</text><rect class="bk" x="210" y="46" width="348.5" height="18" rx="1"/><text class="ts l" x="566.5" y="55">4.25</text></g>
+<g data-delay="1050"><text class="ts r" x="198" y="89">Wed · message of kindness</text><rect class="bm" x="210" y="80" width="311.6" height="18" rx="1"/><text class="ts l" x="529.6" y="89">3.80 (n=5)</text></g>
+<g data-delay="1400"><text class="ts r" x="198" y="123">Thu · draw together</text><rect class="bk" x="210" y="114" width="348.5" height="18" rx="1"/><text class="ts l" x="566.5" y="123">4.25</text></g>
+<g data-delay="1750"><text class="ts r" x="198" y="157">Fri · pop quiz</text><rect class="bm" x="210" y="148" width="311.6" height="18" rx="1"/><text class="ts l" x="529.6" y="157">3.80 (n=5)</text></g>
+<g data-delay="2100"><text class="ts r" x="198" y="191">Sat · family vote</text><rect class="bm" x="210" y="182" width="318.2" height="18" rx="1"/><text class="ts l" x="536.2" y="191">3.88</text></g>
+<g data-delay="2450"><text class="ts r" x="198" y="225">Sun · write together</text><rect class="bm" x="210" y="216" width="234.5" height="18" rx="1"/><text class="ts l" x="452.5" y="225">2.86 (n=7)</text></g>
+</svg>
       </div>
       <figcaption>
-        <p>Solution: switch modes</p>
-        <p class="small">Each person chooses how famiLink looks: the lively virtual room, or a simpler, more traditional interface. Same family, same prompts, different comfort levels.</p>
+        <p>Light and interactive won</p>
+        <p class="small">Average rating per prompt, out of 5, from 8 survey responses. The outfit photo and drawing together scored highest; the mood check-in felt like a status update, and writing a story together felt like work. Some groups ran out of time for the later prompts, noted with n.</p>
+      </figcaption>
+    </figure>
+    <div class="cs-col quotes" data-reveal="noreplay">
+      <blockquote data-delay="0"><p>“Very fun! I liked the photo-taking option because it’s like a polaroid.”</p><cite class="small">Round 1 participant</cite></blockquote>
+      <blockquote data-delay="1200"><p>“It felt the least interactive compared to the other tasks.”</p><cite class="small">On the mood check-in</cite></blockquote>
+      <blockquote data-delay="2400"><p>“I don’t like that the rewards are shared, cause then people can spend on things you don’t want.”</p><cite class="small">On the reward system</cite></blockquote>
+    </div>
+
+    <section class="cs-col phase" id="iterate">
+      <p class="small">07 · Iterate</p>
+      <h2>What we changed</h2>
+      <p>Players loved making their own sprites but found building them fiddly in FigJam. They wanted variety instead of the same tasks every week, a way to see each other’s schedules, and rewards of their own. So for round two we:</p>
+    </section>
+
+    <ol class="cs-col changes" data-reveal="noreplay">
+      <li data-delay="0">Made sprite building easier and more intuitive</li>
+      <li data-delay="400">Cut the storyline reading step at the start</li>
+      <li data-delay="800">Split rewards into family coins and personal diamonds</li>
+      <li data-delay="1200">Added more reward choices, for the room and for avatars</li>
+      <li data-delay="1600">Added a shared family calendar, “Week at a Glance”</li>
+    </ol>
+
+    <section class="cs-col phase" id="round-2">
+      <p class="small">08 · Round 2 · Week 10, March 2024</p>
+      <h2>Testing the changes</h2>
+    </section>
+
+    <figure class="cs-fig wide gallery">
+      <div class="slides media" data-slides>
+          <div class="slide is-active" data-label="New · Week at a Glance"><img src="../assets/images/familink/r2-week-at-a-glance.jpg" alt="Shared weekly family calendar" loading="lazy"></div>
+          <div class="slide" data-label="Simpler sprite builder"><img src="../assets/images/familink/r2-sprite-builder.jpg" alt="Round 2 sprite builder with parts to pick" loading="lazy"></div>
+          <div class="slide" data-label="Family coins · room themes"><img src="../assets/images/familink/r2-family-rewards.jpg" alt="Family rewards to buy new living room themes" loading="lazy"></div>
+          <div class="slide" data-label="New living room"><img src="../assets/images/familink/r2-living-room.jpg" alt="The redesigned living room in round 2" loading="lazy"></div>
+          <span class="count">1 / 4</span>
+        </div>
+      <figcaption>
+        <p class="stage small">New · Week at a Glance</p>
+        <p>Round two</p>
+        <p class="small">A shared calendar, a simpler sprite builder and a reward system with something for the family and something for you.</p>
       </figcaption>
     </figure>
 
-    <!-- Testing -->
-    <section class="cs-col cs-step">
-      <p class="small">Testing</p>
-      <p>How do you test a family app without real families?</p>
-      <p class="small">We turned testing into role-play. Participants were cast as the Harrison family, sat apart to feel the distance, and lived a full week on famiLink in twenty minutes on FigJam, one prompt per “day”.</p>
-    </section>
     <figure class="cs-fig wide">
-      <div class="duo">
-        <figure class="sub"><div class="ph"><span>Round 1 · week 8</span></div><p class="small">Round 1 · week 8</p></figure>
-        <figure class="sub"><div class="ph"><span>Round 2 · week 10</span></div><p class="small">Round 2 · week 10</p></figure>
+      <div class="flow-wrap" data-reveal="noreplay">
+      <svg class="flow chart" viewBox="0 0 680 252" role="img" aria-labelledby="w10T">
+<title id="w10T">Round 1 versus round 2 ratings out of 5. Drawing together rose from 4.25 to 4.67. Rewards rose from 4.00 to 4.56 after splitting family and personal rewards. Week at a Glance, new in round 2, scored 4.56. Outfit photo moved from 4.25 to 4.00.</title>
+<g data-delay="0"><line class="grid" x1="210.0" y1="8" x2="210.0" y2="222"/><text class="ts" x="210.0" y="236">0</text><line class="grid" x1="292.0" y1="8" x2="292.0" y2="222"/><text class="ts" x="292.0" y="236">1</text><line class="grid" x1="374.0" y1="8" x2="374.0" y2="222"/><text class="ts" x="374.0" y="236">2</text><line class="grid" x1="456.0" y1="8" x2="456.0" y2="222"/><text class="ts" x="456.0" y="236">3</text><line class="grid" x1="538.0" y1="8" x2="538.0" y2="222"/><text class="ts" x="538.0" y="236">4</text><line class="grid" x1="620.0" y1="8" x2="620.0" y2="222"/><text class="ts" x="620.0" y="236">5</text></g>
+<g data-delay="500"><text class="ts r" x="198" y="28">Draw together</text><rect class="bm" x="210" y="12" width="348.5" height="14" rx="1"/><text class="ts l" x="566.5" y="19">4.25 · round 1</text><rect class="bk" x="210" y="30" width="382.9" height="14" rx="1"/><text class="ts l" x="600.9" y="37">4.67 · round 2</text></g>
+<g data-delay="1000"><text class="ts r" x="198" y="80">Rewards</text><rect class="bm" x="210" y="64" width="328.0" height="14" rx="1"/><text class="ts l" x="546.0" y="71">4.00 · round 1</text><rect class="bk" x="210" y="82" width="373.9" height="14" rx="1"/><text class="ts l" x="591.9" y="89">4.56 · round 2</text></g>
+<g data-delay="1500"><text class="ts r" x="198" y="132">Week at a Glance</text><text class="ts l" x="218" y="123">new in round 2</text><rect class="bk" x="210" y="134" width="373.9" height="14" rx="1"/><text class="ts l" x="591.9" y="141">4.56 · round 2</text></g>
+<g data-delay="2000"><text class="ts r" x="198" y="184">Outfit photo + vote</text><rect class="bm" x="210" y="168" width="348.5" height="14" rx="1"/><text class="ts l" x="566.5" y="175">4.25 · round 1</text><rect class="bk" x="210" y="186" width="328.0" height="14" rx="1"/><text class="ts l" x="546.0" y="193">4.00 · round 2</text></g>
+</svg>
       </div>
       <figcaption>
-        <p>What changed after round one</p>
-        <p class="small">Most prompts scored 4 out of 5, and the simplest scored highest. People asked for easier sprite building, less repetition and a way to see each other’s schedules. Round two simplified sprites, split personal and family rewards, and added a shared calendar, “Week at a Glance”.</p>
+        <p>The changes landed</p>
+        <p class="small">Average ratings out of 5, round 1 (8 responses) against round 2 (9 responses). Splitting family and personal rewards lifted the reward system from 4.00 to 4.56, and the new shared calendar scored 4.56 in its first test.</p>
       </figcaption>
     </figure>
 
-    <!-- Outcome -->
+    <section class="cs-col phase" id="final">
+      <p class="small">09 · Final prototype</p>
+      <h2>famiLink, in Figma</h2>
+      <p>The final high-fidelity prototype, designed by Wendy Hong and Victoria Yu, brings it all together: the living room, sprite building, mode switching, chat, inventory and the daily and weekly prompts.</p>
+    </section>
+
+    <figure class="cs-fig wide">
+      <div class="phones five">
+        <div><img src="../assets/images/familink/final-inventory.jpg" alt="Final prototype: inventory for the room and sprite" loading="lazy"><p class="small">Inventory</p></div>
+        <div><img src="../assets/images/familink/final-chat.jpg" alt="Final prototype: family chat" loading="lazy"><p class="small">Chat</p></div>
+        <div><img src="../assets/images/familink/final-photo-task.jpg" alt="Final prototype: daily photo prompt" loading="lazy"><p class="small">Photo prompt</p></div>
+        <div><img src="../assets/images/familink/final-drawing-task.jpg" alt="Final prototype: drawing prompt" loading="lazy"><p class="small">Drawing prompt</p></div>
+        <div><img src="../assets/images/familink/final-week-glance.jpg" alt="Final prototype: Week at a Glance calendar" loading="lazy"><p class="small">Week at a Glance</p></div>
+      </div>
+      <figcaption>
+        <p>Every screen, one family</p>
+        <p class="small">The features that survived two rounds of testing.</p>
+      </figcaption>
+    </figure>
+
+    <section class="cs-col phase" id="reflect">
+      <p class="small">10 · Reflect</p>
+      <h2>What I took away</h2>
+      <p><strong>Customization is crucial.</strong> Building a sprite that looks like you is how people start to feel at home.</p>
+      <p><strong>Rewards need two pockets.</strong> Shared rewards build togetherness; personal ones keep each person motivated.</p>
+      <p><strong>Daily rituals must be light.</strong> Every prompt that felt like homework broke the spell.</p>
+      <p><strong>Design for the whole family.</strong> Ages and comfort with technology vary widely in one family, so the design has to flex.</p>
+      <p>Next, we would let families visit each other’s homes, add voice and video calls, and support more languages for multilingual families.</p>
+    </section>
+
     <section class="cs-col cs-end">
-      <p>Outcome</p>
-      <p class="small">Two rounds of role-play testing, seven daily prompts, and one clear lesson: daily rituals have to be light. Customization and shared rewards are what keep a family coming back.</p>
       <p class="pull">“I liked how adorable it is! Imagining doing this w my family makes me happy!”</p>
       <p class="small">Playtest participant</p>
     </section>
