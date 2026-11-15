@@ -223,3 +223,22 @@ body.on-hero .ui { color: #fff; }
   .cs-facts { grid-template-columns: 1fr 1fr; }
   .cs-fig, .cs-end, .cs-next { margin-bottom: 14vh; }
 }
+
+/* ---------- Flow diagram (it builds itself, step by step, when scrolled into view) ---------- */
+.flow-wrap { padding: 8px 0; }
+.flow { display: block; width: 100%; height: auto; font-family: var(--font); }
+.flow .b { fill: none; stroke: var(--fg); stroke-width: .6; }
+.flow .k { fill: var(--fg); stroke: var(--fg); stroke-width: .6; }
+.flow .k + .tt, .flow .k + .tt + .ts { fill: var(--bg); }
+.flow .c { fill: none; stroke: var(--mute); stroke-width: .6; stroke-dasharray: 3 4; }
+.flow .a { fill: none; stroke: var(--mute); stroke-width: .8; }
+.flow .tt { font-size: 12px; fill: var(--fg); text-anchor: middle; dominant-baseline: central; }
+.flow .ts { font-size: 10px; fill: var(--mute); text-anchor: middle; dominant-baseline: central; }
+.flow .ts.l { text-anchor: start; }
+.flow .ts.r { text-anchor: end; }
+.flow [data-step] { transition: opacity .6s ease, transform .6s ease; }
+.js-reveal .flow [data-step] { opacity: 0; transform: translateY(6px); }
+.js-reveal .is-shown .flow [data-step] { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .js-reveal .flow [data-step] { opacity: 1; transform: none; }
+}

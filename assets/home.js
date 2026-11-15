@@ -125,3 +125,22 @@ document.querySelectorAll('[data-slides]').forEach((box) => {
   render();
   setInterval(render, 1000);
 })();
+
+/* ---------- Diagrams that build themselves step by step ---------- */
+(function () {
+  const boxes = document.querySelectorAll('[data-reveal]');
+  if (!boxes.length || !('IntersectionObserver' in window)) return;
+  document.documentElement.classList.add('js-reveal');
+  const STEP = 260; // ms between steps
+  boxes.forEach((box) => {
+    box.querySelectorAll('[data-step]').forEach((g) => {
+      g.style.transitionDelay = `${(Number(g.dataset.step) - 1) * STEP}ms`;
+    });
+  });
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((en) => {
+      if (en.isIntersecting) { en.target.classList.add('is-shown'); io.unobserve(en.target); }
+    });
+  }, { threshold: 0.35 });
+  boxes.forEach((b) => io.observe(b));
+})();
