@@ -4,35 +4,118 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>it takes two alices — Oulan Li</title>
-<meta name="description" content="A two-player AR puzzle game that makes kids’ first step into programming social.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/style.css">
+<meta name="description" content="A two-player AR puzzle game on Tilt Five that makes kids’ first step into programming social.">
+<link rel="stylesheet" href="../assets/home.css">
+<script>
+  try { if (localStorage.getItem('theme') === 'dark') document.documentElement.dataset.theme = 'dark'; } catch (e) {}
+</script>
 </head>
 <body>
-<div class="wrap">
-  <header class="site-header">
-    <a class="name" href="../index.html">Oulan Li</a>
-    <nav aria-label="Main"><a href="../index.html#work" aria-current="page">Work</a><a href="../about.html">About</a><a href="../assets/Oulan-Li-Resume.pdf">Résumé</a></nav>
-  </header>
-  <main>
-    <header class="cs-head"><p class="label">CMU ETC · Spring 2026</p><h1>it takes two alices</h1><p class="sub">A two-player AR puzzle game that makes kids’ first step into programming social.</p></header>
-    <div class="cs-hero"><img src="https://images.squarespace-cdn.com/content/v1/677fdd7bf5a081101e4784d3/3f559d69-78c5-4320-9f46-068e8549c45b/Screenshot+2026-08-24+081638.png?format=1500w" alt="Card dogs following signposts on the Tilt Five AR board"></div>
-    <dl class="meta"><div><dt>Role</dt><dd>UI/UX Designer · 3D Artist</dd></div><div><dt>Team</dt><dd>6 students</dd></div><div><dt>Timeline</dt><dd>Jan – May 2026</dd></div><div><dt>Platform</dt><dd>Tilt Five AR</dd></div></dl>
-    <div class="cs-body">
-<section class="cs-section"><p class="label">Problem</p><h2>Programming feels intimidating — and lonely.</h2><p>For 10–13-year-olds the barrier isn’t syntax; it’s confidence. Block coding usually happens alone at a screen.</p><p class="hmw">How might we make a first step into programming feel social and playful?</p></section>
-<section class="cs-section"><p class="label">Solution</p><h2>Code you can pick up, together.</h2><div class="points"><div><span class="n">01</span><h3>Commands as objects</h3><p>Tiles slot into signposts on the board.</p></div><div><span class="n">02</span><h3>Two seats, one puzzle</h3><p>Both players share one program, each from their own side.</p></div><div><span class="n">03</span><h3>Learn by running</h3><p>Watch the card dogs follow your code, then try again.</p></div></div></section>
-<section class="cs-section"><p class="label">My work</p><h2>Interfaces that live on the table.</h2><p>I designed the in-game UI/UX and built 3D assets for a scene projected onto a tabletop — so everything had to read clearly from either seat, with simple forms and strong contrast.</p><figure class="fig"><img src="https://images.squarespace-cdn.com/content/v1/677fdd7bf5a081101e4784d3/3f31cfc2-866f-40e5-82e5-93a8d96ccbce/8518751f2fca9f12de647e4543375cf7-1-939x1024.jpg" alt="Concept art of signposts, tiles and card dogs" loading="lazy"><figcaption>Concept art — signposts, tiles and card dogs</figcaption></figure></section>
-<section class="cs-section"><p class="label">Outcome</p><h2>Built for a classroom.</h2><div class="stats"><div class="stat"><strong>5</strong><span>levels: debugging, conditionals, operators, loops</span></div><div class="stat"><strong>~15</strong><span>minutes of play</span></div><div class="stat"><strong>10–13</strong><span>year-olds playtested</span></div></div><p style="margin-top:32px">Shipped with a teacher’s guide and a Tilt Five developer guide, and featured by <a href="https://www.hotmetalcampus.com/news-research/students-collaborate-to-code-with-it-takes-2-alices">Hot Metal Campus</a>.</p></section>
-<section class="cs-section"><p class="label">Reflection</p><h2>Measure the behavior you want.</h2><p>We tracked how often players talked to each other — not just whether they finished. It kept the design focused on learning together.</p></section>
-    </div>
-    <section class="next" aria-label="More work"><h2>More work</h2><div class="grid"><a class="card" href="familink.html"><div class="thumb"><div class="cover" style="--c:#F2E5D6"><span>famiLink</span></div></div><h3>famiLink</h3><p>A shared virtual home that helps long-distance families stay close.</p><p class="role">UX Research · 2024</p></a><a class="card" href="nom.html"><div class="thumb"><div class="cover" style="--c:#E2EBDD"><span>NOM</span></div></div><h3>NOM</h3><p>Restaurant discovery for indecisive college students — one swipe at a time.</p><p class="role">UX Design · 2024</p></a></div></section>
+
+  <a class="ui ui-tl" href="../index.html">Oulan Li</a>
+  <button class="ui ui-tc" id="theme-toggle" type="button" aria-label="Toggle dark mode">Dark</button>
+  <a class="ui ui-tr" href="../about.html">About</a>
+  <a class="ui ui-bl" href="../index.html#p2">← Work</a>
+  <a class="ui ui-br" href="familink.html">Next ↗</a>
+  <p class="ui ui-rm" id="observer" aria-live="off" title="A small note on your visit. Nothing is recorded.">visit · 00:00</p>
+
+  <main class="cs">
+
+    <!-- Header: title, one-line role, what I did, facts -->
+    <header class="cs-col cs-head">
+      <h1>it takes two alices</h1>
+      <p>UI/UX Design &amp; 3D Art</p>
+    </header>
+
+    <!-- TODO(Oulan): confirm each line is your own work (vs. Yiran's). -->
+    <ol class="cs-col cs-did">
+      <li>Designed the in-world UI — paw cursors, upward-facing signposts and a picnic-blanket tile tray — so kids could “write code” without a 2D menu.</li>
+      <li>Redesigned the characters from standing card soldiers into Poker Puppies that read clearly from the Tilt Five’s top-down view.</li>
+      <li>Reworked the environment’s visual hierarchy after playtests, so players could always tell what was interactive.</li>
+    </ol>
+
+    <dl class="cs-col cs-facts">
+      <div><dt>Platform</dt><dd>Tilt Five AR</dd></div>
+      <div><dt>Team</dt><dd>6, CMU ETC</dd></div>
+      <div><dt>Timeline</dt><dd>Jan – May 2026</dd></div>
+      <div><dt>Client</dt><dd>The Alice Project</dd></div>
+      <div><dt>Audience</dt><dd>Kids 10–13</dd></div>
+      <div><dt>Shipped</dt><dd>Free on Steam</dd></div>
+    </dl>
+
+    <!-- Story, told through images. Each figure: image + a title line + one quiet sentence. -->
+    <figure class="cs-fig wide">
+      <div class="ph"><span>Gameplay on the Tilt Five board</span></div>
+      <figcaption>
+        <p>Learn to code. Together.</p>
+        <p class="small">Two players share one AR board, each from their own side. Programming feels intimidating to young kids — we wanted their first step to be social, and fun.</p>
+      </figcaption>
+    </figure>
+
+    <figure class="cs-fig">
+      <div class="ph"><span>Early card-soldier characters</span></div>
+      <figcaption>
+        <p>Challenge — characters you couldn’t read</p>
+        <p class="small">Inspired by Wonderland’s card soldiers, our first characters stood upright. From the Tilt Five’s top-down view, their faces were almost invisible.</p>
+      </figcaption>
+    </figure>
+
+    <figure class="cs-fig">
+      <div class="ph"><span>Poker Puppies</span></div>
+      <figcaption>
+        <p>Poker Puppies</p>
+        <p class="small">Turning the cards into puppies put every suit and number face-up. Clearer in play — and far more lovable to kids.</p>
+      </figcaption>
+    </figure>
+
+    <figure class="cs-fig wide">
+      <div class="ph"><span>Signpost + picnic-blanket tile tray</span></div>
+      <figcaption>
+        <p>Code as objects in the world</p>
+        <p class="small">Instead of Alice’s 2D block menu, players grab tiles from a picnic blanket and place them on a signpost to build the puppies’ path. Signposts face up so both players can read them.</p>
+      </figcaption>
+    </figure>
+
+    <figure class="cs-fig">
+      <div class="ph"><span>Cursor: thin cube → cat &amp; bunny paws</span></div>
+      <figcaption>
+        <p>A cursor that belongs in Wonderland</p>
+        <p class="small">A thin cube became cat and bunny paws, with a hold state so picking something up feels clear — and playful.</p>
+      </figcaption>
+    </figure>
+
+    <figure class="cs-fig wide">
+      <div class="ph"><span>Level layout, before / after</span></div>
+      <figcaption>
+        <p>Playful, but clear</p>
+        <p class="small">Playtesters got lost among the decorations. We simplified the layout, guided movement with paths, added small effects on interaction and softened the palette.</p>
+      </figcaption>
+    </figure>
+
+    <figure class="cs-fig">
+      <div class="ph"><span>Playtest with middle schoolers</span></div>
+      <figcaption>
+        <p>“I wish we did this in school!”</p>
+        <p class="small">Players talked to each other constantly — our main metric. Some asked to download it and keep playing at home.</p>
+      </figcaption>
+    </figure>
+
+    <section class="cs-col cs-end">
+      <p>Outcome</p>
+      <p class="small">3 levels plus a tutorial, a Teacher’s Guide for classrooms, and a free release on Steam — one of the few games built natively for Tilt Five.</p>
+      <p class="links"><a href="https://projects.etc.cmu.edu/it-takes-two-alices/" target="_blank" rel="noopener">Project site ↗</a></p>
+    </section>
+
+    <nav class="cs-col cs-next" aria-label="Next project">
+      <p class="small">Next</p>
+      <p><a href="familink.html">famiLink →</a></p>
+    </nav>
+
+    <footer class="cs-col cs-foot">
+      <p class="small">Designed and built by Oulan Li. ©2026</p>
+    </footer>
   </main>
-  <footer class="site-footer">
-    <h2>Let’s connect.</h2>
-    <div class="links"><a href="mailto:YOUR-EMAIL">Email</a><a href="https://www.linkedin.com/in/oulan-li-69a9032a8">LinkedIn</a><a href="../assets/Oulan-Li-Resume.pdf">Résumé</a></div>
-  </footer>
-</div>
+
+<script src="../assets/home.js"></script>
 </body>
 </html>

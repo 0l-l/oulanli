@@ -177,3 +177,43 @@ body.on-hero .ui { color: #fff; }
   .fun-grid { grid-template-columns: 1fr 1fr; gap: 6vh 16px; }
   .fun-wide { --col: calc(100vw - 32px); }
 }
+
+/* ---------- Project page ----------
+   A narrow centred column, like a printed page. Text stays narrow;
+   detailed images can step out to a wider frame with .wide. */
+.cs { --read: min(460px, calc(100vw - 32px)); --wide: min(760px, calc(100vw - 32px)); }
+.cs-col { width: var(--read); margin-left: auto; margin-right: auto; }
+.cs-head { text-align: center; padding-top: 22vh; }
+.cs-head h1 { font: inherit; margin: 0 0 1.45em; }
+.cs-did { list-style: none; counter-reset: did; padding: 0; margin-top: 9vh; margin-bottom: 0; }
+.cs-did li { counter-increment: did; margin-bottom: 1.45em; }
+.cs-did li::before { content: counter(did) ". "; }
+.cs-facts {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px 16px;
+  margin-top: 7vh; margin-bottom: 22vh;
+}
+.cs-facts dt { font-size: 11px; color: var(--mute); }
+.cs-facts dd { margin: 2px 0 0; }
+
+.cs-fig { width: var(--read); margin: 0 auto 22vh; }
+.cs-fig.wide { width: var(--wide); }
+.cs-fig .ph {
+  aspect-ratio: 4 / 3; display: flex; align-items: center; justify-content: center;
+  background: var(--ph); color: var(--ph-text);
+}
+.cs-fig.wide .ph { aspect-ratio: 16 / 9; }
+.cs-fig figcaption { width: var(--read); margin: 16px auto 0; text-align: center; }
+.small { font-size: 11px; color: var(--mute); }
+.cs-fig .small { margin-top: 4px; }
+
+.cs-end { text-align: center; margin-bottom: 18vh; }
+.cs-end .small { margin-top: 4px; }
+.cs-end .links { margin-top: 1.45em; }
+.cs-next { text-align: center; margin-bottom: 18vh; }
+.cs-foot { text-align: center; padding-bottom: 12vh; }
+
+@media (max-width: 760px) {
+  .cs-head { padding-top: 16vh; }
+  .cs-facts { grid-template-columns: 1fr 1fr; }
+  .cs-fig, .cs-end, .cs-next { margin-bottom: 14vh; }
+}
