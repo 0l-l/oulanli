@@ -491,3 +491,12 @@ body[data-accent="itta"],
 body[data-accent="itta"] a, body[data-accent="itta"] button {
   cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Ccircle cx='10' cy='10' r='5' fill='%235f9445'/%3E%3Ccircle cx='10' cy='10' r='8.5' fill='none' stroke='%235f9445' stroke-opacity='.35'/%3E%3C/svg%3E") 10 10, auto;
 }
+
+/* Yiko Yiko: bakery yolk yellow */
+body[data-accent="yiko"] { --accent: #b07d00; --accent-soft: rgba(255,200,40,.6); }
+[data-theme="dark"] body[data-accent="yiko"] { --accent: #f5c84b; --accent-soft: rgba(245,200,75,.45); }
+body[data-accent="yiko"] ::selection { color: #1a1a1a; background: #ffd23f; }
+body[data-accent="yiko"],
+body[data-accent="yiko"] a, body[data-accent="yiko"] button {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Ccircle cx='10' cy='10' r='5' fill='%23f2b600'/%3E%3Ccircle cx='10' cy='10' r='8.5' fill='none' stroke='%23f2b600' stroke-opacity='.4'/%3E%3C/svg%3E") 10 10, auto;
+}
