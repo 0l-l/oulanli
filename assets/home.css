@@ -445,3 +445,4 @@ strong { font-weight: 600; }
 .fun-four .cap .desc + .desc { margin-top: 4px; }
 .fun-four .watch { margin-top: 10px; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
 @media (max-width: 720px) { .fun-four { grid-template-columns: 1fr; } }
+.fun-four .prompt { margin: 8px 0 0; color: var(--fg); font-style: italic; }
