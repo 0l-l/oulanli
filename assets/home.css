@@ -321,3 +321,5 @@ strong { font-weight: 600; }
 .takeaways dt { font-size: 11px; color: var(--mute); }
 .takeaways dd { margin: 2px 0 0; }
 @media (max-width: 760px) { .takeaways { grid-template-columns: 1fr 1fr; margin-top: -6vh; } }
+
+.cs-fig .still { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; display: block; }
