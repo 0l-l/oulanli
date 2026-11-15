@@ -141,9 +141,8 @@ document.querySelectorAll('[data-slides]').forEach((box) => {
   // Which project is in view?
   const io = new IntersectionObserver((entries) => {
     entries.forEach((en) => {
-      const name = en.target.querySelector('.count')
-        ? en.target.querySelector('.slide span').textContent.split(' —')[0]
-        : null;
+      const link = en.target.querySelector('.meta a');
+      const name = link ? link.textContent : null;
       if (en.isIntersecting && name && watching !== name) { watching = name; since = Date.now(); }
       else if (!en.isIntersecting && watching === name) { watching = null; }
     });
