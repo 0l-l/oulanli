@@ -236,9 +236,20 @@ body.on-hero .ui { color: #fff; }
 .flow .ts { font-size: 10px; fill: var(--mute); text-anchor: middle; dominant-baseline: central; }
 .flow .ts.l { text-anchor: start; }
 .flow .ts.r { text-anchor: end; }
-.flow [data-step] { transition: opacity .6s ease, transform .6s ease; }
-.js-reveal .flow [data-step] { opacity: 0; transform: translateY(6px); }
-.js-reveal .is-shown .flow [data-step] { opacity: 1; transform: none; }
+.flow .tq { font-size: 13px; fill: var(--fg); text-anchor: middle; dominant-baseline: central; font-style: italic; }
+.flow [data-delay] { transition: opacity .9s ease, transform .9s ease; transition-delay: var(--d, 0ms); }
+.flow .big { transition-duration: 1.4s; }
+.no-anim .flow [data-delay] { transition: none !important; animation: none !important; }
+.js-reveal .flow [data-delay] { opacity: 0; transform: translateY(6px); }
+.js-reveal .is-shown .flow [data-delay] { opacity: 1; transform: none; }
+/* The question appears, lingers, then makes way for the answer. */
+.js-reveal .flow .q { transition: none; }
+.js-reveal .is-shown .flow .q { opacity: 0; animation: ask 2.8s ease var(--d, 0ms) both; }
+@keyframes ask { 0% { opacity: 0; transform: translateY(6px); } 22% { opacity: 1; transform: none; } 78% { opacity: 1; } 100% { opacity: 0; } }
+.flow-replay { display: block; margin: 10px auto 0; font-size: 11px; color: var(--mute); opacity: 0; transition: opacity .6s ease; }
+.flow-replay.on { opacity: 1; }
 @media (prefers-reduced-motion: reduce) {
-  .js-reveal .flow [data-step] { opacity: 1; transform: none; }
+  .js-reveal .flow [data-delay] { opacity: 1; transform: none; transition: none; }
+  .js-reveal .flow .q { display: none; }
 }
+

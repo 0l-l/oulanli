@@ -126,21 +126,40 @@ document.querySelectorAll('[data-slides]').forEach((box) => {
   setInterval(render, 1000);
 })();
 
-/* ---------- Diagrams that build themselves step by step ---------- */
+/* ---------- Diagrams that build themselves, at the pace of someone thinking ---------- */
 (function () {
   const boxes = document.querySelectorAll('[data-reveal]');
   if (!boxes.length || !('IntersectionObserver' in window)) return;
   document.documentElement.classList.add('js-reveal');
-  const STEP = 260; // ms between steps
   boxes.forEach((box) => {
-    box.querySelectorAll('[data-step]').forEach((g) => {
-      g.style.transitionDelay = `${(Number(g.dataset.step) - 1) * STEP}ms`;
+    let last = 0;
+    box.querySelectorAll('[data-delay]').forEach((g) => {
+      const d = Number(g.dataset.delay) || 0;
+      g.style.setProperty('--d', d + 'ms');
+      last = Math.max(last, d);
+    });
+    // A quiet "replay" link once it has finished.
+    const btn = document.createElement('button');
+    btn.type = 'button'; btn.className = 'flow-replay'; btn.textContent = '↻ replay';
+    box.after(btn);
+    box._done = last + 1600;
+    btn.addEventListener('click', () => {
+      btn.classList.remove('on');
+      box.classList.add('no-anim');               // hide instantly, then play again
+      box.classList.remove('is-shown');
+      void box.offsetWidth;
+      box.classList.remove('no-anim');
+      requestAnimationFrame(() => requestAnimationFrame(() => play(box)));
     });
   });
+  function play(box) {
+    box.classList.add('is-shown');
+    setTimeout(() => box.nextElementSibling && box.nextElementSibling.classList.add('on'), box._done);
+  }
   const io = new IntersectionObserver((entries) => {
     entries.forEach((en) => {
-      if (en.isIntersecting) { en.target.classList.add('is-shown'); io.unobserve(en.target); }
+      if (en.isIntersecting) { play(en.target); io.unobserve(en.target); }
     });
-  }, { threshold: 0.35 });
+  }, { threshold: 0.55 });
   boxes.forEach((b) => io.observe(b));
 })();
