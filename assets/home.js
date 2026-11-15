@@ -34,6 +34,7 @@ document.querySelectorAll('[data-slides]').forEach((box) => {
     i = (n + slides.length) % slides.length;
     slides[i].classList.add('is-active');
     if (count) count.textContent = `${i + 1} / ${slides.length}`;
+    if (box._dots) [...box._dots.children].forEach((d, k) => d.classList.toggle('on', k === i));
     // Galleries: show which stage this is, and only play the visible clip.
     const stage = box.closest('figure') && box.closest('figure').querySelector('.stage');
     if (stage && slides[i].dataset.label) stage.innerHTML = slides[i].dataset.label;
@@ -48,6 +49,25 @@ document.querySelectorAll('[data-slides]').forEach((box) => {
         if (e.isIntersecting) { const p = v.play(); if (p) p.catch(() => {}); } else v.pause();
       });
     }), { threshold: 0.4 }).observe(box);
+  }
+  // Galleries get visible arrows and dots, so it's obvious there is more to see.
+  const fig = box.closest('figure.gallery');
+  if (fig) {
+    const mk = (cls, label, txt) => { const b = document.createElement('button'); b.type = 'button'; b.className = cls; b.setAttribute('aria-label', label); b.textContent = txt; return b; };
+    const prev = mk('g-arrow g-prev', 'Previous', '←');
+    const next = mk('g-arrow g-next', 'Next', '→');
+    box.append(prev, next);
+    prev.addEventListener('click', (e) => { e.stopPropagation(); show(i - 1); });
+    next.addEventListener('click', (e) => { e.stopPropagation(); show(i + 1); });
+    const dots = document.createElement('div'); dots.className = 'g-dots';
+    slides.forEach((s, k) => {
+      const d = mk('g-dot', `Show ${k + 1} of ${slides.length}`, '');
+      d.addEventListener('click', () => show(k));
+      dots.appendChild(d);
+    });
+    box.after(dots);
+    box._dots = dots;
+    dots.children[0].classList.add('on');
   }
   const leftHalf = (e) => e.clientX - box.getBoundingClientRect().left < box.offsetWidth / 2;
   box.addEventListener('mousemove', (e) => box.classList.toggle('at-left', leftHalf(e)));
