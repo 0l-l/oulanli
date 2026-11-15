@@ -401,3 +401,27 @@ strong { font-weight: 600; }
 @media (prefers-reduced-motion: reduce) {
   .js-reveal .stats [data-delay], .js-reveal .map-list [data-delay], .js-reveal .changes [data-delay] { opacity: 1; transform: none; transition: none; }
 }
+
+/* ---------- Yiko Yiko ---------- */
+/* Long screenshots pan slowly top to bottom inside a fixed frame */
+.scroll { object-fit: cover !important; object-position: 50% 0; animation: pan var(--dur, 16s) ease-in-out infinite alternate; }
+@keyframes pan { 0%, 10% { object-position: 50% 0; } 90%, 100% { object-position: 50% 100%; } }
+.duo .sub img.scroll { aspect-ratio: 3 / 2; }
+.phones.four { grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.phones .tag { color: var(--mute); }
+.row-label { margin: 0 0 10px; color: var(--mute); }
+.phones + .row-label { margin-top: 28px; }
+.people { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 0 auto 12vh; }
+.people > div { padding-top: 14px; border-top: 1px solid color-mix(in srgb, var(--mute) 30%, transparent); }
+.people .small { margin: 0 0 6px; }
+.people [data-delay] { transition: opacity .9s ease, transform .9s ease; transition-delay: var(--d, 0ms); }
+.js-reveal .people [data-delay] { opacity: 0; transform: translateY(6px); }
+.js-reveal .is-shown.people [data-delay] { opacity: 1; transform: none; }
+@media (max-width: 720px) {
+  .people { grid-template-columns: 1fr; }
+  .phones.four { grid-template-columns: repeat(2, 1fr); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .scroll { animation: none; }
+  .js-reveal .people [data-delay] { opacity: 1; transform: none; transition: none; }
+}
