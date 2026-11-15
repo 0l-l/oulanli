@@ -153,3 +153,27 @@ body.on-hero .ui { color: #fff; }
   html { scroll-behavior: auto; }
   * { transition: none !important; }
 }
+
+/* ---------- Status + inline notes ---------- */
+.live::before { content: "● "; font-size: 9px; vertical-align: 1px; }
+.desc-inline { color: var(--mute); }
+.more { padding: 0 0 6vh; }
+
+/* ---------- I had fun ---------- */
+.page-head { display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; padding: 22vh 0 14vh; }
+.page-head .desc { margin-top: 0; }
+.fun-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 9vh 24px; margin-bottom: 24vh; }
+.fun-grid .tile { display: block; }
+.fun-grid .tile:hover { opacity: 1; }
+.fun-grid .thumb { aspect-ratio: 1 / 1; overflow: hidden; }
+.fun-grid .thumb > * { transition: transform .6s ease; }
+.fun-grid .tile:hover .thumb > * { transform: scale(1.03); }
+.fun-grid .cap { padding-top: 12px; }
+.fun-grid .cap .desc { margin-top: 0; }
+.fun-wide { --col: min(72vw, 1080px); }
+@media (max-width: 760px) {
+  .page-head { grid-template-columns: 1fr; padding: 16vh 0 10vh; }
+  .page-head .desc { margin-top: 1.45em; }
+  .fun-grid { grid-template-columns: 1fr 1fr; gap: 6vh 16px; }
+  .fun-wide { --col: calc(100vw - 32px); }
+}
