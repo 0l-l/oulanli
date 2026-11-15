@@ -306,3 +306,12 @@ strong { font-weight: 600; }
 .small strong { color: var(--fg); font-weight: 500; }
 .pairs .rule { margin: 8px 0 10px; line-height: 1.7; }
 .pairs .rule { text-align: center; }
+
+/* ---------- Asset sheet: one tile per 3D piece ---------- */
+.pieces { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.pieces img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; }
+.pieces [data-delay] { transition: opacity .7s ease, transform .7s ease; transition-delay: var(--d, 0ms); }
+.js-reveal .pieces [data-delay] { opacity: 0; transform: translateY(6px); }
+.js-reveal .is-shown.pieces [data-delay] { opacity: 1; transform: none; }
+@media (max-width: 760px) { .pieces { grid-template-columns: repeat(2, 1fr); } }
+@media (prefers-reduced-motion: reduce) { .js-reveal .pieces [data-delay] { opacity: 1; transform: none; transition: none; } }
