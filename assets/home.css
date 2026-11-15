@@ -446,3 +446,8 @@ strong { font-weight: 600; }
 .fun-four .watch { margin-top: 10px; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
 @media (max-width: 720px) { .fun-four { grid-template-columns: 1fr; } }
 .fun-four .prompt { margin: 8px 0 0; color: var(--fg); font-style: italic; }
+.fun-four .cap-top { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+.fun-four .cap-top p { margin: 0; }
+.fun-four .cap-top .role { text-align: right; flex-shrink: 0; }
+.fun-four .prompt { margin: 10px 0 0; }
+.fun-four .answer { margin-top: 4px; }
