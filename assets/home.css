@@ -185,7 +185,9 @@ body.on-hero .ui { color: #fff; }
 .cs-col { width: var(--read); margin-left: auto; margin-right: auto; }
 .cs-head { text-align: center; padding-top: 22vh; }
 .cs-head h1 { font: inherit; margin: 0 0 1.45em; }
-.cs-did { list-style: none; counter-reset: did; padding: 0; margin-top: 9vh; margin-bottom: 0; }
+.cs-why { margin-top: 9vh; }
+.cs-label { margin-top: 7vh; margin-bottom: 1.45em; }
+.cs-did { list-style: none; counter-reset: did; padding: 0; margin-top: 0; margin-bottom: 0; }
 .cs-did li { counter-increment: did; margin-bottom: 1.45em; }
 .cs-did li::before { content: counter(did) ". "; }
 .cs-facts {
