@@ -301,3 +301,8 @@ body.on-hero .ui { color: #fff; }
 .js-reveal .is-shown.pairs [data-delay] { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) { .js-reveal .pairs [data-delay] { opacity: 1; transform: none; transition: none; } }
 .duo + figcaption { margin-top: 2.6em; }
+
+strong { font-weight: 600; }
+.small strong { color: var(--fg); font-weight: 500; }
+.pairs .rule { margin: 8px 0 -10px; }
+.pairs .rule ~ .rule { margin-top: 36px; }
