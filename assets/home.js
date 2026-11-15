@@ -1,4 +1,4 @@
-// Olan Li — homepage behaviour: theme toggle, image carousels, visitor log.
+// Oulan Li — homepage behaviour: theme toggle, image carousels, visitor log.
 
 /* ---------- Dark mode ---------- */
 (function () {

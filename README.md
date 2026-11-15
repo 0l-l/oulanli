@@ -1,4 +1,4 @@
-# Olan Li — portfolio
+# Oulan Li — portfolio
 
 Plain HTML and CSS, no build step. Hosted on GitHub Pages.
 
@@ -31,4 +31,4 @@ Keep images under ~500 KB (export at 1600 px wide, JPG or WebP). Put videos on Y
 
 ## Still to fill in
 
-Search the pages for `todo` and `YOUR-EMAIL`. Add the résumé as `assets/Olan-Li-Resume.pdf`.
+Search the pages for `todo` and `YOUR-EMAIL`. Add the résumé as `assets/Oulan-Li-Resume.pdf`.
