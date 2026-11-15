@@ -94,13 +94,13 @@ body.on-hero .ui { color: #fff; }
 
 .intro {
   display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px;
-  padding: 30vh 0 30vh;
+  padding: 22vh 0 18vh;
 }
 .intro .k { color: var(--fg); }
 .intro p:last-child { color: var(--fg); max-width: 34em; }
 
 /* ---------- Project ---------- */
-.project { margin-bottom: 16vh; scroll-margin-top: 80px; }
+.project { margin-bottom: 9vh; scroll-margin-top: 80px; }
 
 .slides {
   position: relative;
