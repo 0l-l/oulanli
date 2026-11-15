@@ -451,3 +451,13 @@ strong { font-weight: 600; }
 .fun-four .cap-top .role { text-align: right; flex-shrink: 0; }
 .fun-four .prompt { margin: 10px 0 0; }
 .fun-four .answer { margin-top: 4px; }
+
+/* ---------- Hero seasons ---------- */
+.hero-media .season { position: absolute; inset: 0; opacity: 0; transition: opacity 1.2s ease; }
+.hero-media .season.is-on { opacity: 1; }
+.hero-note { pointer-events: auto; z-index: 2; }
+.hero-note button { font: inherit; color: inherit; background: none; border: 0; padding: 0 2px; cursor: pointer; opacity: .55; transition: opacity .3s ease; }
+.hero-note button:hover, .hero-note button.is-on { opacity: 1; }
+.hero-note button.is-on { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+.hero-note span { margin: 0 2px; }
+@media (prefers-reduced-motion: reduce) { .hero-media .season { transition: none; } }

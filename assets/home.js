@@ -214,3 +214,15 @@ document.querySelectorAll('[data-slides]').forEach((box) => {
   }, { threshold: 0.55 });
   boxes.forEach((b) => io.observe(b));
 })();
+
+/* ---------- Hero: one photo per season, newest shown first ---------- */
+(() => {
+  const note = document.querySelector('.hero-note');
+  if (!note) return;
+  const imgs = document.querySelectorAll('.hero-media .season');
+  note.querySelectorAll('button').forEach((b) => b.addEventListener('click', () => {
+    const s = b.dataset.season;
+    imgs.forEach((im) => im.classList.toggle('is-on', im.dataset.season === s));
+    note.querySelectorAll('button').forEach((x) => { const on = x === b; x.classList.toggle('is-on', on); x.setAttribute('aria-pressed', on); });
+  }));
+})();
