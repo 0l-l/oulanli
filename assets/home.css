@@ -509,3 +509,12 @@ body[data-accent="familink"] a, body[data-accent="familink"] button {
   cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Ccircle cx='10' cy='10' r='5' fill='%23d9824a'/%3E%3Ccircle cx='10' cy='10' r='8.5' fill='none' stroke='%23d9824a' stroke-opacity='.4'/%3E%3C/svg%3E") 10 10, auto;
 }
 body[data-accent] .phase > p.small:first-child { color: var(--accent); }
+
+/* I had fun: Carnegie Red */
+body[data-accent="cmu"] { --accent: #c41230; --accent-soft: rgba(196,18,48,.28); }
+[data-theme="dark"] body[data-accent="cmu"] { --accent: #ff5a6e; --accent-soft: rgba(255,90,110,.38); }
+body[data-accent="cmu"],
+body[data-accent="cmu"] a, body[data-accent="cmu"] button {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Ccircle cx='10' cy='10' r='5' fill='%23c41230'/%3E%3Ccircle cx='10' cy='10' r='8.5' fill='none' stroke='%23c41230' stroke-opacity='.35'/%3E%3C/svg%3E") 10 10, auto;
+}
+body[data-accent] .desc .hl { color: var(--fg); }

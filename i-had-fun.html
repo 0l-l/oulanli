@@ -10,7 +10,7 @@
   try { if (localStorage.getItem('theme') === 'dark') document.documentElement.dataset.theme = 'dark'; } catch (e) {}
 </script>
 </head>
-<body class="fun-wide">
+<body class="fun-wide" data-accent="cmu">
 
   <a class="ui ui-tl" href="index.html">Oulan Li</a>
   <button class="ui ui-tc" id="theme-toggle" type="button" aria-label="Toggle dark mode">Dark</button>
@@ -22,7 +22,7 @@
   <main class="col">
     <header class="page-head">
       <h1 style="font:inherit;margin:0">I had fun</h1>
-      <p class="desc">Four games in fourteen weeks, made in Building Virtual Worlds, my first semester at Carnegie Mellon’s Entertainment Technology Center (Fall 2025). A new team, a new prompt and a new platform every round. Two made it to the BVW Festival.</p>
+      <p class="desc">Four games in fourteen weeks, made in <span class="hl">Building Virtual Worlds</span>, my first semester at <span class="hl">Carnegie Mellon’s Entertainment Technology Center</span> (Fall 2025). A new team, a new prompt and a new platform every round. Two made it to the BVW Festival.</p>
     </header>
 
     <section class="fun-grid fun-four" aria-label="Games">
