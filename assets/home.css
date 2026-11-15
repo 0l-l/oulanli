@@ -483,3 +483,11 @@ body[data-accent="360"],
 body[data-accent="360"] a, body[data-accent="360"] button {
   cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Ccircle cx='10' cy='10' r='5' fill='%232b7fff'/%3E%3Ccircle cx='10' cy='10' r='8.5' fill='none' stroke='%232b7fff' stroke-opacity='.35'/%3E%3C/svg%3E") 10 10, auto;
 }
+
+/* it takes two alices: Wonderland meadow green */
+body[data-accent="itta"] { --accent: #4f7f3a; --accent-soft: rgba(124,170,80,.55); }
+[data-theme="dark"] body[data-accent="itta"] { --accent: #9cc779; --accent-soft: rgba(156,199,121,.42); }
+body[data-accent="itta"],
+body[data-accent="itta"] a, body[data-accent="itta"] button {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Ccircle cx='10' cy='10' r='5' fill='%235f9445'/%3E%3Ccircle cx='10' cy='10' r='8.5' fill='none' stroke='%235f9445' stroke-opacity='.35'/%3E%3C/svg%3E") 10 10, auto;
+}
