@@ -304,5 +304,6 @@ body.on-hero .ui { color: #fff; }
 
 strong { font-weight: 600; }
 .small strong { color: var(--fg); font-weight: 500; }
-.pairs .rule { margin: 8px 0 -10px; }
-.pairs .rule ~ .rule { margin-top: 36px; }
+.pairs .rule { margin: 8px 0 6px; }
+.pairs .rule { text-align: center; }
+.pairs .rule .sep { color: var(--mute); margin: 0 12px; }
