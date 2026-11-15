@@ -100,7 +100,7 @@ body.on-hero .ui { color: #fff; }
 .intro p:last-child { color: var(--fg); max-width: 34em; }
 
 /* ---------- Project ---------- */
-.project { margin-bottom: 26vh; scroll-margin-top: 80px; }
+.project { margin-bottom: 16vh; scroll-margin-top: 80px; }
 
 .slides {
   position: relative;
