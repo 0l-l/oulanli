@@ -253,3 +253,10 @@ body.on-hero .ui { color: #fff; }
   .js-reveal .flow .q { display: none; }
 }
 
+
+/* ---------- Gallery figure: media fits inside a 16:9 frame ---------- */
+.gallery .slides.media { aspect-ratio: 16 / 9; background: var(--ph); }
+.gallery .slide { display: flex; align-items: center; justify-content: center; }
+.gallery .slide img, .gallery .slide video { width: 100%; height: 100%; object-fit: contain; }
+.gallery .slide .ph { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: var(--ph-text); padding: 0 24px; text-align: center; }
+.gallery .stage { margin: 0 0 4px; }

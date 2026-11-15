@@ -34,7 +34,21 @@ document.querySelectorAll('[data-slides]').forEach((box) => {
     i = (n + slides.length) % slides.length;
     slides[i].classList.add('is-active');
     if (count) count.textContent = `${i + 1} / ${slides.length}`;
+    // Galleries: show which stage this is, and only play the visible clip.
+    const stage = box.closest('figure') && box.closest('figure').querySelector('.stage');
+    if (stage && slides[i].dataset.label) stage.innerHTML = slides[i].dataset.label;
+    slides.forEach((s, k) => s.querySelectorAll('video').forEach((v) => {
+      if (k === i) { const p = v.play(); if (p) p.catch(() => {}); } else v.pause();
+    }));
   };
+  // Start the first clip once the gallery is on screen.
+  if (box.querySelector('video') && 'IntersectionObserver' in window) {
+    new IntersectionObserver((es) => es.forEach((e) => {
+      slides[i].querySelectorAll('video').forEach((v) => {
+        if (e.isIntersecting) { const p = v.play(); if (p) p.catch(() => {}); } else v.pause();
+      });
+    }), { threshold: 0.4 }).observe(box);
+  }
   const leftHalf = (e) => e.clientX - box.getBoundingClientRect().left < box.offsetWidth / 2;
   box.addEventListener('mousemove', (e) => box.classList.toggle('at-left', leftHalf(e)));
   box.addEventListener('click', (e) => show(leftHalf(e) ? i - 1 : i + 1));
